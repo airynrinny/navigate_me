@@ -5,9 +5,21 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "navigate_me",
+            "name": "startingPoint",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib\\startingPoint.dart"
+        },
+        {
+            "name": "navi_guide",
             "request": "launch",
             "type": "dart"
+        },
+        {
+            "name": "Flutter (lib\\navi_guide.dart)",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib\\navi_guide.dart"
         }
     ]
 }

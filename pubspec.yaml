@@ -70,8 +70,25 @@ flutter:
   # https://flutter.dev/assets-and-images/#from-packages
 
 assets:
-- images/starting-point.jpg
+- images/starting_point.png
 - images/cafe.png 
+- images/block_d.jpg
+- images/blockd-cafe/1.png
+- images/blockd-cafe/2.png
+- images/blockd-cafe/3.png
+- images/blockd-cafe/4.png
+- images/blockd-cafe/5.png
+- images/blockd-cafe/6.png
+- images/blockd-cafe/7.png
+- images/blockd-cafe/8.png
+- images/blockd-cafe/9.png
+- images/blockd-cafe/10.png
+- images/blockd-cafe/11.png
+- images/blockd-cafe/12.png
+- images/blockd-cafe/13.png
+- images/blockd-cafe/14.png
+- images/blockd-cafe/15.png
+
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a

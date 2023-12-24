@@ -47,9 +47,11 @@ class PickUrDest1Page extends StatelessWidget {
                               // Handle button 1 press
                             },
                             style: ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll(Colors.white),
+                              backgroundColor:
+                                  MaterialStatePropertyAll(Colors.white),
                             ),
-                            child: Text('Button 1', style: TextStyle(color: Colors.black)),
+                            child: Text('Button 1',
+                                style: TextStyle(color: Colors.black)),
                           ),
                         ),
                         Expanded(
@@ -58,40 +60,49 @@ class PickUrDest1Page extends StatelessWidget {
                               // Navigate to PickUrDest2Page
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => PickUrDest2Page()),
+                                MaterialPageRoute(
+                                    builder: (context) => PickUrDest2Page()),
                               );
                             },
                             style: ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll(Colors.white),
+                              backgroundColor:
+                                  MaterialStatePropertyAll(Colors.white),
                             ),
-                            child: Text('Button 2', style: TextStyle(color: Colors.black)),
+                            child: Text('Button 2',
+                                style: TextStyle(color: Colors.black)),
                           ),
                         ),
                         Expanded(
                           child: ElevatedButton(
                             onPressed: null,
                             style: ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll(Colors.white),
+                              backgroundColor:
+                                  MaterialStatePropertyAll(Colors.white),
                             ),
-                            child: Text('Button 3', style: TextStyle(color: Colors.black)),
+                            child: Text('Button 3',
+                                style: TextStyle(color: Colors.black)),
                           ),
                         ),
                         Expanded(
                           child: ElevatedButton(
                             onPressed: null,
                             style: ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll(Colors.white),
+                              backgroundColor:
+                                  MaterialStatePropertyAll(Colors.white),
                             ),
-                            child: Text('Button 4', style: TextStyle(color: Colors.black)),
+                            child: Text('Button 4',
+                                style: TextStyle(color: Colors.black)),
                           ),
                         ),
                         Expanded(
                           child: ElevatedButton(
                             onPressed: null,
                             style: ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll(Colors.white),
+                              backgroundColor:
+                                  MaterialStatePropertyAll(Colors.white),
                             ),
-                            child: Text('Button 5', style: TextStyle(color: Colors.black)),
+                            child: Text('Button 5',
+                                style: TextStyle(color: Colors.black)),
                           ),
                         )
                       ],
@@ -103,13 +114,19 @@ class PickUrDest1Page extends StatelessWidget {
                       children: [
                         // First row
                         Expanded(
-                          child: ImageWithDescription(imagePath: 'images/UIAM.jpg', description: 'Description 1'),
+                          child: ImageWithDescription(
+                              imagePath: 'images/UIAM.jpg',
+                              description: 'Description 1'),
                         ),
                         Expanded(
-                          child: ImageWithDescription(imagePath: 'images/UIAM.jpg', description: 'Description 2'),
+                          child: ImageWithDescription(
+                              imagePath: 'images/UIAM.jpg',
+                              description: 'Description 2'),
                         ),
                         Expanded(
-                          child: ImageWithDescription(imagePath: 'images/UIAM.jpg', description: 'Description 3'),
+                          child: ImageWithDescription(
+                              imagePath: 'images/UIAM.jpg',
+                              description: 'Description 3'),
                         ),
                       ],
                     ),
@@ -119,13 +136,19 @@ class PickUrDest1Page extends StatelessWidget {
                       children: [
                         // Second row
                         Expanded(
-                          child: ImageWithDescription(imagePath: 'images/iium_logo.png', description: 'Description 4'),
+                          child: ImageWithDescription(
+                              imagePath: 'images/iium_logo.png',
+                              description: 'Description 4'),
                         ),
                         Expanded(
-                          child: ImageWithDescription(imagePath: 'images/iium_logo.png', description: 'Description 5'),
+                          child: ImageWithDescription(
+                              imagePath: 'images/iium_logo.png',
+                              description: 'Description 5'),
                         ),
                         Expanded(
-                          child: ImageWithDescription(imagePath: 'images/iium_logo.png', description: 'Description 6'),
+                          child: ImageWithDescription(
+                              imagePath: 'images/iium_logo.png',
+                              description: 'Description 6'),
                         ),
                       ],
                     ),

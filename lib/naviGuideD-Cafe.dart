@@ -4,6 +4,63 @@ void main() {
   runApp(MyApp());
 }
 
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('NavigateMe'),
+        ),
+        body: ListView(
+          children: [
+            Text(
+              'Starting point: Cafe',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            ListTile(
+              title: Text('STEP 1: KICT Cafeteria'),
+              subtitle: Text('explanation to go from here'),
+            ),
+            ListTile(
+              title: Text('STEP 2: Name of place'),
+              subtitle: Text('explanation to go from here'),
+            ),
+            ListTile(
+              title: Text('STEP 3: Name of place'),
+              subtitle: Text('explanation to go from here'),
+            ),
+            ListTile(
+              title: Text('STEP 4: Name of place'),
+              subtitle: Text('explanation to go from here'),
+            ),
+            ListTile(
+              title: Text('STEP 5: You have arrived!'),
+              subtitle: Text('explanation to go from here'),
+            ),
+            ListTile(
+              title: Text('JUMP TO STEP'),
+              onTap: () {
+                // navigate to desired step
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+
+
+
+/*import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
 class imageStyle {
   late String asset;
   double width = 400;
@@ -306,3 +363,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+*/

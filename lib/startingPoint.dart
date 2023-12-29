@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'naviGuideD-Cafe.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,42 +31,13 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.teal,
-        elevation: 0,
-        toolbarHeight: 241.6,
-        flexibleSpace: Stack(
-          children: [
-            Positioned.fill(
-              child: Image.asset(
-                'images/starting_point.png',
-                width: 1366,
-                height: 241.6,
-                fit: BoxFit.cover,
-              ),
-            ),
-            Positioned(
-              left: 650,
-              top: 65.5,
-              child: Text(
-                'NavigateMe',
-                style: TextStyle(
-                  fontSize: 44,
-                  fontFamily: 'Montserrat',
-                  color: Colors.teal,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-      body: Center(
-        child: Container(
+      body: Stack(children: [
+        Container(
             padding: const EdgeInsets.all(20),
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Row(
+                  Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text('Pick your starting point',
@@ -130,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   )
                 ])),
-      ),
+      ]),
     );
   }
 }

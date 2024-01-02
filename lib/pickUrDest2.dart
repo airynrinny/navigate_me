@@ -1,174 +1,11 @@
-<<<<<<< HEAD
-import 'package:flutter/material.dart';
-
-class PickUrDest2Page extends StatelessWidget {
-  const PickUrDest2Page({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(body: Stack(
-        fit: StackFit.expand,
-        children: [
-          Image.asset(
-              "images/pickDestBG.png",
-              fit: BoxFit.cover,
-            ),
-          // Centered content
-            const Center(
-              child: SingleChildScrollView(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    SizedBox(height: 10.0),
-                    Text(
-                      'Navigate Me',
-                      style: TextStyle(
-                        fontSize: 44,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                      ),
-                    ),
-          Text(
-                      'Pick Your Destination',
-                      style: TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                      ),
-                    ),
-                    SizedBox(height: 16.0),
-          Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                      Expanded(child: ElevatedButton(
-                          onPressed: null,
-                          style: ButtonStyle(
-                            backgroundColor: MaterialStatePropertyAll(Colors.white),
-                          ),
-                          child: Text('Button 1', style: TextStyle(color: Colors.black)),
-                        ),),
-                        Expanded(child: ElevatedButton(
-                          onPressed: null,
-                          style: ButtonStyle(
-                            backgroundColor: MaterialStatePropertyAll(Colors.white),
-                          ),
-                          child: Text('Button 2', style: TextStyle(color: Colors.black)),
-                        ),),
-                        Expanded(child: ElevatedButton(
-                          onPressed: null,
-                          style: ButtonStyle(
-                            backgroundColor: MaterialStatePropertyAll(Colors.white),
-                          ),
-                          child: Text('Button 3', style: TextStyle(color: Colors.black)),
-                        ),),
-                        Expanded(child: ElevatedButton(
-                          onPressed: null,
-                          style: ButtonStyle(
-                            backgroundColor: MaterialStatePropertyAll(Colors.white),
-                          ),
-                          child: Text('Button 4', style: TextStyle(color: Colors.black)),
-                        ),),
-                        Expanded(child: ElevatedButton(
-                          onPressed: null,
-                          style: ButtonStyle(
-                            backgroundColor: MaterialStatePropertyAll(Colors.white),
-                          ),
-                          child: Text('Button 5', style: TextStyle(color: Colors.black)),
-                        ),)
-                      ],
-                    ),
-          SizedBox(height: 20.0),
-          // Two rows of images with descriptions
-         Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        // First row
-                        Expanded(
-                          child: ImageWithDescription(imagePath: 'images/UIAM.jpg', description: 'Description 1'),
-                        ),
-                        Expanded(
-                          child: ImageWithDescription(imagePath: 'images/UIAM.jpg', description: 'Description 2'),
-                        ),
-                        Expanded(
-                          child: ImageWithDescription(imagePath: 'images/UIAM.jpg', description: 'Description 3'),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 16.0),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        // Second row
-                        Expanded(
-                          child: ImageWithDescription(imagePath: 'images/iium_logo.png', description: 'Description 4'),
-                        ),
-                        Expanded(
-                          child: ImageWithDescription(imagePath: 'images/iium_logo.png', description: 'Description 5'),
-                        ),
-                        Expanded(
-                          child: ImageWithDescription(imagePath: 'images/iium_logo.png', description: 'Description 6'),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-
-
-class ImageWithDescription extends StatelessWidget {
-  final String imagePath;
-  final String description;
-
-  const ImageWithDescription({required this.imagePath, required this.description});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Image.asset(
-          imagePath,
-          width: 100,
-          height: 100,
-          fit: BoxFit.cover,
-        ),
-        const SizedBox(height: 8.0),
-        Text(
-          description,
-          style: const TextStyle(
-            fontSize: 14,
-            color: Colors.black,
-          ),
-        ),
-        const SizedBox(height: 8.0),
-        ElevatedButton(
-          onPressed: () {
-            // Handle the button press, e.g., navigate to the next page
-            print("Find Button Pressed for $description");
-          },
-          style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(Colors.white),
-          ),
-          child: const Text('Find', style: TextStyle(color: Colors.black)),
-        ),
-      ],
-    );
-  }
-=======
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'pickUrDest1.dart';
+import 'pickUrDest3.dart';
 
 class PickUrDest2Page extends StatelessWidget {
+  final TextEditingController _searchController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -188,145 +25,90 @@ class PickUrDest2Page extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     const SizedBox(height: 10.0),
-                    const Text(
-                      'Navigate Me',
-                      style: TextStyle(
-                        fontSize: 44,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  IconButton(
+                                    icon: const Icon(Icons.search, color: Colors.white),
+                                    onPressed: () => _showSearchDialog(context),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(width: 16.0),
+                              const Column(
+                                children: [
+                                  Text(
+                                    '2Navigate Me',
+                                    style: TextStyle(
+                                      fontSize: 44,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Pick Your Destination',
+                                    style: TextStyle(
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 16.0),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              _buildCircularButton(context, '1', PickUrDest1Page()),
+                              _buildCircularButton(context, '2', PickUrDest2Page()),
+                              _buildCircularButton(context, '3', PickUrDest3Page()),
+                              _buildCircularButton(context, '4', PickUrDest1Page()),
+                              _buildCircularButton(context, '5', PickUrDest1Page()),
+                            ],
+                          ),
+                          const SizedBox(height: 20.0),
+                          // Two rows of images with descriptions
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              // First row
+                              Expanded(
+                                child: ImageWithDescription(imagePath: 'images/UIAM.jpg', description: 'Description 1', url: 'https://www.example.com/1'),
+                              ),
+                              Expanded(
+                                child: ImageWithDescription(imagePath: 'images/UIAM.jpg', description: 'Description 2', url: 'https://www.example.com/2'),
+                              ),
+                              Expanded(
+                                child: ImageWithDescription(imagePath: 'images/UIAM.jpg', description: 'Description 3', url: 'https://www.example.com/3'),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 16.0),
+                          // Second row
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Expanded(
+                                child: ImageWithDescription(imagePath: 'images/iium_logo.png', description: 'Description 4', url: 'https://www.example.com/4'),
+                              ),
+                              Expanded(
+                                child: ImageWithDescription(imagePath: 'images/iium_logo.png', description: 'Description 5', url: 'https://www.example.com/5'),
+                              ),
+                              Expanded(
+                                child: ImageWithDescription(imagePath: 'images/iium_logo.png', description: 'Description 6', url: 'https://www.example.com/6'),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
-                    ),
-                    const Text(
-                      'Pick Your Destination',
-                      style: TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                      ),
-                    ),
-                    const SizedBox(height: 16.0),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Expanded(
-                          child: ElevatedButton(
-                            onPressed: () {
-                              print("Button Pressed for button 1");
-                              Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => PickUrDest1Page(),
-                          ),
-                        );
-                            },
-                            style: const ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll(Colors.white),
-                            ),
-                            child: const Text('Button 1', style: TextStyle(color: Colors.black)),
-                          ),
-                        ),
-                        Expanded(
-                          child: ElevatedButton(
-                            onPressed: () {
-                              print("Button Pressed for button 1");
-                              Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => PickUrDest2Page(),
-                          ),
-                        );
-                            },
-                            style: const ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll(Colors.white),
-                            ),
-                            child: const Text('Button 2', style: TextStyle(color: Colors.black)),
-                          ),
-                        ),
-                        Expanded(
-                          child: ElevatedButton(
-                            onPressed: () {
-                              print("Button Pressed for button 1");
-                              Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => PickUrDest1Page(),
-                          ),
-                        );
-                            },
-                            style: const ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll(Colors.white),
-                            ),
-                            child: const Text('Button 3', style: TextStyle(color: Colors.black)),
-                          ),
-                        ),
-                        Expanded(
-                          child: ElevatedButton(
-                            onPressed: () {
-                              print("Button Pressed for button 1");
-                              Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => PickUrDest1Page(),
-                          ),
-                        );
-                            },
-                            style: const ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll(Colors.white),
-                            ),
-                            child: const Text('Button 4', style: TextStyle(color: Colors.black)),
-                          ),
-                        ),
-                        Expanded(
-                          child: ElevatedButton(
-                            onPressed: () {
-                              print("Button Pressed for button 1");
-                              Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => PickUrDest1Page(),
-                          ),
-                        );
-                            },
-                            style: const ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll(Colors.white),
-                            ),
-                            child: const Text('Button 5', style: TextStyle(color: Colors.black)),
-                          ),
-                        )
-                      ],
-                    ),
-                    const SizedBox(height: 20.0),
-                    // Two rows of images with descriptions
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        // First row
-                        Expanded(
-                          child: ImageWithDescription(imagePath: 'images/UIAM.jpg', description: 'Description 1', url: 'https://www.example.com/1'),
-                        ),
-                        Expanded(
-                          child: ImageWithDescription(imagePath: 'images/UIAM.jpg', description: 'Description 2', url: 'https://www.example.com/2'),
-                        ),
-                        Expanded(
-                          child: ImageWithDescription(imagePath: 'images/UIAM.jpg', description: 'Description 3', url: 'https://www.example.com/3'),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 16.0),
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        // Second row
-                        Expanded(
-                          child: ImageWithDescription(imagePath: 'images/iium_logo.png', description: 'Description 4', url: 'https://www.example.com/4'),
-                        ),
-                        Expanded(
-                          child: ImageWithDescription(imagePath: 'images/iium_logo.png', description: 'Description 5', url: 'https://www.example.com/5'),
-                        ),
-                        Expanded(
-                          child: ImageWithDescription(imagePath: 'images/iium_logo.png', description: 'Description 6', url: 'https://www.example.com/6'),
-                        ),
-                      ],
                     ),
                   ],
                 ),
@@ -335,6 +117,68 @@ class PickUrDest2Page extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildCircularButton(BuildContext context, String label, Widget destination) {
+    return CircleAvatar(
+      radius: 20, // Adjust the radius as needed
+      backgroundColor: Colors.white,
+      child: ElevatedButton(
+        onPressed: () {
+          print("Button Pressed for $label");
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => destination,
+            ),
+          );
+        },
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(Colors.transparent),
+        ),
+        child: Text(
+          label,
+          style: const TextStyle(color: Colors.black),
+        ),
+      ),
+    );
+  }
+
+  Future<void> _showSearchDialog(BuildContext context) async {
+    return showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Search'),
+          content: TextField(
+            controller: _searchController,
+            decoration: const InputDecoration(
+              hintText: 'Enter your search query...',
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('Cancel'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                String searchQuery = _searchController.text;
+                print("Search Button Pressed with query: $searchQuery");
+                // Add your search functionality here
+                Navigator.of(context).pop();
+              },
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.black),
+              ),
+              child: const Text('Search', style: TextStyle(color: Colors.white)),
+            ),
+          ],
+        );
+      },
     );
   }
 }
@@ -365,7 +209,7 @@ class ImageWithDescription extends StatelessWidget {
             description,
             style: const TextStyle(
               fontSize: 14,
-              color: Colors.blue, // Set the color to indicate it's a link
+              color: Colors.black, // Set the color to indicate it's a link
               decoration: TextDecoration.underline,
             ),
           ),
@@ -383,5 +227,13 @@ class ImageWithDescription extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  void _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }

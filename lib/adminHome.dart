@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fyp_project/adminLogin.dart';
 
 class AdminHomePage extends StatelessWidget {
   const AdminHomePage({super.key});
@@ -45,15 +46,14 @@ class AdminHomePage extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {
                       print("Button Pressed - Navigating to adminlogin");
-                      // Navigator.of(context).push(MaterialPageRoute(
-                      //   builder: (context) => PickDest(),
-                      // ));
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => AdminLoginPage(),
+                      ));
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
                     ),
-                    child: const Text('Log In',
-                        style: TextStyle(color: Colors.black)),
+                    child: const Text('Log In', style: TextStyle(color: Colors.black)),
                   ),
                   const SizedBox(height: 16.0)
                 ],

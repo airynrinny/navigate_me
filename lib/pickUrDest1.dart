@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fyp_project/startingPoint.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'naviGuideCafe_StdLounge.dart';
 import 'pickUrDest2.dart';
 import 'pickUrDest3.dart';
 
@@ -18,7 +18,6 @@ class PickUrDest1Page extends StatelessWidget {
               "images/pickDestBG.png",
               fit: BoxFit.cover,
             ),
-            // Centered content
             Center(
               child: SingleChildScrollView(
                 child: Column(
@@ -76,35 +75,75 @@ class PickUrDest1Page extends StatelessWidget {
                             ],
                           ),
                           const SizedBox(height: 20.0),
-                          // Two rows of images with descriptions
                           const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              // First row
                               Expanded(
-                                child: ImageWithDescription(imagePath: 'images/UIAM.jpg', description: 'Description 1', url: 'https://www.example.com/1'),
+                                child: ImageWithDescription(
+                                  imagePath: 'images/UIAM.jpg',
+                                  description: 'Description 1',
+                                  url: 'https://www.example.com/1',
+                                ),
                               ),
                               Expanded(
-                                child: ImageWithDescription(imagePath: 'images/UIAM.jpg', description: 'Description 2', url: 'https://www.example.com/2'),
+                                child: ImageWithDescription(
+                                  imagePath: 'images/UIAM.jpg',
+                                  description: 'Description 2',
+                                  url: 'https://www.example.com/2',
+                                ),
                               ),
                               Expanded(
-                                child: ImageWithDescription(imagePath: 'images/UIAM.jpg', description: 'Description 3', url: 'https://www.example.com/3'),
+                                child: ImageWithDescription(
+                                  imagePath: 'images/UIAM.jpg',
+                                  description: 'Description 3',
+                                  url: 'https://www.example.com/3',
+                                ),
                               ),
                             ],
                           ),
                           const SizedBox(height: 16.0),
-                          // Second row
                           const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Expanded(
-                                child: ImageWithDescription(imagePath: 'images/iium_logo.png', description: 'Description 4', url: 'https://www.example.com/4'),
+                                child: ImageWithDescription(
+                                  imagePath: 'images/iium_logo.png',
+                                  description: 'Description 4',
+                                  url: 'https://www.example.com/4',
+                                ),
                               ),
                               Expanded(
-                                child: ImageWithDescription(imagePath: 'images/iium_logo.png', description: 'Description 5', url: 'https://www.example.com/5'),
+                                child: ImageWithDescription(
+                                  imagePath: 'images/iium_logo.png',
+                                  description: 'Description 5',
+                                  url: 'https://www.example.com/5',
+                                ),
                               ),
                               Expanded(
-                                child: ImageWithDescription(imagePath: 'images/iium_logo.png', description: 'Description 6', url: 'https://www.example.com/6'),
+                                child: ImageWithDescription(
+                                  imagePath: 'images/iium_logo.png',
+                                  description: 'Description 6',
+                                  url: 'https://www.example.com/6',
+                                ),
+                              ),
+                            ],
+                          ),
+                           const Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Expanded(
+                                child: ImageWithDescription(
+                                  imagePath: 'images/iium_logo.png',
+                                  description: 'Description 7',
+                                  url: 'https://www.example.com/4',
+                                ),
+                              ),
+                              Expanded(
+                                child: ImageWithDescription(
+                                  imagePath: 'images/iium_logo.png',
+                                  description: 'Description 8',
+                                  url: 'https://www.example.com/5',
+                                ),
                               ),
                             ],
                           ),
@@ -123,7 +162,7 @@ class PickUrDest1Page extends StatelessWidget {
 
   Widget _buildCircularButton(BuildContext context, String label, Widget destination) {
     return CircleAvatar(
-      radius: 20, // Adjust the radius as needed
+      radius: 20,
       backgroundColor: Colors.white,
       child: ElevatedButton(
         onPressed: () {
@@ -170,8 +209,6 @@ class PickUrDest1Page extends StatelessWidget {
                 String searchQuery = _searchController.text;
                 print("Search Button Pressed with query: $searchQuery");
                 // Add your search functionality here
-                _performSearch(searchQuery);
-
                 Navigator.of(context).pop();
               },
               style: ButtonStyle(
@@ -184,17 +221,6 @@ class PickUrDest1Page extends StatelessWidget {
       },
     );
   }
-}
-
-void _performSearch(String searchQuery) {
-  // Replace this with your actual search logic
-  // For example, filter the images and descriptions based on the search query
-  // You may need to maintain a list of original items and a filtered list
-  // and update the UI accordingly.
-  // You might also consider using a state management solution for more complex scenarios.
-
-  // For demonstration purposes, let's just print the search query.
-  print("Performing search with query: $searchQuery");
 }
 
 class ImageWithDescription extends StatelessWidget {
@@ -217,13 +243,13 @@ class ImageWithDescription extends StatelessWidget {
         const SizedBox(height: 8.0),
         GestureDetector(
           onTap: () {
-            _launchURL(url); // Add the URL you want to open
+            _launchURL(url);
           },
           child: Text(
             description,
             style: const TextStyle(
               fontSize: 14,
-              color: Colors.black, // Set the color to indicate it's a link
+              color: Colors.black,
               decoration: TextDecoration.underline,
             ),
           ),
@@ -231,7 +257,7 @@ class ImageWithDescription extends StatelessWidget {
         const SizedBox(height: 8.0),
         ElevatedButton(
           onPressed: () {
-            _navigateToStartingPointPage(context);
+            _handleFindButtonPress(context);
           },
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -249,13 +275,26 @@ class ImageWithDescription extends StatelessWidget {
       throw 'Could not launch $url';
     }
   }
-}
 
-void _navigateToStartingPointPage(BuildContext context) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => StartingPointPage(title: 'NavigateMe'),
-      ),
-    );
+  void _handleFindButtonPress(BuildContext context) {
+    // Modify the logic based on your requirements
+    if (description == 'Description 1') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => NaviGuideCafe_StdLoungePage(),
+        ),
+      );
+    } else if (description == 'Description 2') {
+      // Handle the destination for the second button
+    } else if (description == 'Description 3') {
+      // Handle the destination for the third button
+    } else if (description == 'Description 4') {
+      // Handle the destination for the fourth button
+    } else if (description == 'Description 5') {
+      // Handle the destination for the fifth button
+    } else if (description == 'Description 6') {
+      // Handle the destination for the sixth button
+    }
   }
+}

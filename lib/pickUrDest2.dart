@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fyp_project/naviGuideCafe_MPH.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'pickUrDest1.dart';
 import 'pickUrDest3.dart';
@@ -102,9 +103,6 @@ class PickUrDest2Page extends StatelessWidget {
                               Expanded(
                                 child: ImageWithDescription(imagePath: 'images/iium_logo.png', description: 'Description 5', url: 'https://www.example.com/5'),
                               ),
-                              Expanded(
-                                child: ImageWithDescription(imagePath: 'images/iium_logo.png', description: 'Description 6', url: 'https://www.example.com/6'),
-                              ),
                             ],
                           ),
                         ],
@@ -203,13 +201,13 @@ class ImageWithDescription extends StatelessWidget {
         const SizedBox(height: 8.0),
         GestureDetector(
           onTap: () {
-            _launchURL(url); // Add the URL you want to open
+            _launchURL(url);
           },
           child: Text(
             description,
             style: const TextStyle(
               fontSize: 14,
-              color: Colors.black, // Set the color to indicate it's a link
+              color: Colors.black,
               decoration: TextDecoration.underline,
             ),
           ),
@@ -217,8 +215,7 @@ class ImageWithDescription extends StatelessWidget {
         const SizedBox(height: 8.0),
         ElevatedButton(
           onPressed: () {
-            print("Find Button Pressed for $description");
-            // Handle the button press, e.g., navigate to the next page
+            _handleFindButtonPress(context);
           },
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -234,6 +231,27 @@ class ImageWithDescription extends StatelessWidget {
       await launch(url);
     } else {
       throw 'Could not launch $url';
+    }
+  }
+
+  void _handleFindButtonPress(BuildContext context) {
+    // Modify the logic based on your requirements
+    if (description == 'Description 1') {
+    } else if (description == 'Description 2') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => NaviGuideCafe_MHPPage(),
+        ),
+      );
+    } else if (description == 'Description 3') {
+      // Handle the destination for the third button
+    } else if (description == 'Description 4') {
+      // Handle the destination for the fourth button
+    } else if (description == 'Description 5') {
+      // Handle the destination for the fifth button
+    } else if (description == 'Description 6') {
+      // Handle the destination for the sixth button
     }
   }
 }

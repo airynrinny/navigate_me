@@ -1,108 +1,217 @@
 import 'package:flutter/material.dart';
-import 'naviGuideD-Cafe.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'pickUrDest1.dart';
 
-void main() {
-  runApp(MyApp());
-}
+class StartingPointPage extends StatelessWidget {
+  final TextEditingController _searchController = TextEditingController();
 
-class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'NavigateMe',
-      theme: ThemeData(
-        primarySwatch: Colors.teal,
+      home: Scaffold(
+        body: Stack(
+          fit: StackFit.expand,
+          children: [
+            Image.asset(
+              "images/startingPointBg.png",
+              fit: BoxFit.cover,
+            ),
+            // Centered content
+            Center(
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const SizedBox(height: 10.0),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  IconButton(
+                                    icon: const Icon(Icons.search, color: Colors.white),
+                                    onPressed: () => _showSearchDialog(context),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(width: 16.0),
+                              const Column(
+                                children: [
+                                  Text(
+                                    'Navigate Me',
+                                    style: TextStyle(
+                                      fontSize: 44,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Pick Your Starting point',
+                                    style: TextStyle(
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),        
+                          const SizedBox(height: 20.0),
+                          // Two rows of images with descriptions
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              // First row
+                              Expanded(
+                                child: ImageWithDescription(imagePath: 'images/block_d.jpg', description: 'Block D', url: 'https://www.example.com/2'),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 16.0),
+                          // Second row
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Expanded(
+                                child: ImageWithDescription(imagePath: 'images/cafe.png', description: 'KICT Cafeteria', url: 'https://www.example.com/1'),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
-      home: MyHomePage(title: 'NavigateMe'),
+    );
+  }
+
+  Widget _buildCircularButton(BuildContext context, String label, Widget destination) {
+    return CircleAvatar(
+      radius: 20, // Adjust the radius as needed
+      backgroundColor: Colors.white,
+      child: ElevatedButton(
+        onPressed: () {
+          print("Button Pressed for $label");
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => destination,
+            ),
+          );
+        },
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(Colors.transparent),
+        ),
+        child: Text(
+          label,
+          style: const TextStyle(color: Colors.black),
+        ),
+      ),
+    );
+  }
+
+  Future<void> _showSearchDialog(BuildContext context) async {
+    return showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Search'),
+          content: TextField(
+            controller: _searchController,
+            decoration: const InputDecoration(
+              hintText: 'Enter your search query...',
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('Cancel'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                String searchQuery = _searchController.text;
+                print("Search Button Pressed with query: $searchQuery");
+                // Add your search functionality here
+                Navigator.of(context).pop();
+              },
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.black),
+              ),
+              child: const Text('Search', style: TextStyle(color: Colors.white)),
+            ),
+          ],
+        );
+      },
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+class ImageWithDescription extends StatelessWidget {
+  final String imagePath;
+  final String description;
+  final String url;
 
-  final String title;
+  const ImageWithDescription({required this.imagePath, required this.description, required this.url});
 
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(children: [
-        Container(
-            padding: const EdgeInsets.all(20),
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text('Pick your starting point',
-                            style: const TextStyle(
-                                fontSize: 24,
-                                fontFamily: 'Montserrat',
-                                color: Colors.teal)),
-                      ]),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Column(children: [
-                        Image.asset(
-                          'images/cafe.png',
-                          width: 200,
-                          height: 241.6,
-                          fit: BoxFit.cover,
-                        ),
-                        Text('KICT Cafeteria',
-                            style: const TextStyle(
-                                fontSize: 20,
-                                fontFamily: 'DM Sans',
-                                color: Colors.black)),
-                        TextButton(
-                            style: TextButton.styleFrom(
-                                primary: Colors.black,
-                                backgroundColor:
-                                    const Color.fromARGB(0, 128, 128, 128),
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 24, vertical: 16),
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(24))),
-                            onPressed: () {},
-                            child: Text('Start'))
-                      ])
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Image.asset(
-                        'images/block_d.jpg',
-                        width: 200,
-                        height: 241.6,
-                        fit: BoxFit.cover,
-                      ),
-                      Text('Block D',
-                          style: const TextStyle(
-                              fontSize: 20,
-                              fontFamily: 'DM Sans',
-                              color: Colors.black)),
-                      TextButton(
-                          style: TextButton.styleFrom(
-                              primary: Colors.black,
-                              backgroundColor:
-                                  const Color.fromARGB(0, 128, 128, 128),
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: 24, vertical: 16),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(24))),
-                          onPressed: () {},
-                          child: Text('Start'))
-                    ],
-                  )
-                ])),
-      ]),
+    return Column(
+      children: [
+        Image.asset(
+          imagePath,
+          width: 100,
+          height: 100,
+          fit: BoxFit.cover,
+        ),
+        const SizedBox(height: 8.0),
+        GestureDetector(
+          onTap: () {
+            _launchURL(url); // Add the URL you want to open
+          },
+          child: Text(
+            description,
+            style: const TextStyle(
+              fontSize: 14,
+              color: Colors.black, // Set the color to indicate it's a link
+              decoration: TextDecoration.underline,
+            ),
+          ),
+        ),
+        const SizedBox(height: 8.0),
+        ElevatedButton(
+          onPressed: () {
+                      print("Button Pressed - Sign in for Admin");
+
+                      // Navigate to the adminHome.dart page using the navigator from MaterialApp
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => PickUrDest1Page()));
+                    },
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all(Colors.white),
+          ),
+          child: const Text('Start', style: TextStyle(color: Colors.black)),
+        ),
+      ],
     );
+  }
+
+  void _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'pickDest.dart';
+// import 'pickUrDest1.dart';
 import 'adminHome.dart';
+import 'startingPoint.dart';
+// import 'package:firebase_core/firebase_core.dart';
 
 Future<void> main() async {
   // Connets your flutter project with firebase
@@ -9,6 +10,18 @@ Future<void> main() async {
   await Firebase.initializeApp();
   runApp(MyApp());
 }
+
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   await Firebase.initializeApp();
+//   runApp(MyApp());
+// }
+
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   await Firebase.initializeApp();
+//   runApp(MyApp());
+// }
 
 class MyApp extends StatelessWidget {
   @override
@@ -70,7 +83,7 @@ class MyHomePage extends StatelessWidget {
                     onPressed: () {
                       print("Button Pressed - Navigating to PickDest");
                       Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => PickDest(),
+                        builder: (context) => StartingPointPage(),
                       ));
                     },
                     style: ButtonStyle(

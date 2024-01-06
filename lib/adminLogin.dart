@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
+
 import 'pickUrDest1.dart';
 
 class AdminLoginPage extends StatelessWidget {
-  final TextEditingController _usernameController = TextEditingController();
+final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Admin Login'),
-        ),
         body: Builder(
           builder: (BuildContext context) {
             return Center(

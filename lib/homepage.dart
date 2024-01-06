@@ -1,10 +1,25 @@
 import 'package:flutter/material.dart';
-import 'pickDest.dart';
+// import 'pickUrDest1.dart';
 import 'adminHome.dart';
+import 'startingPoint.dart';
+// import 'package:firebase_core/firebase_core.dart';
+
 
 void main() {
   runApp(MyApp());
 }
+
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   await Firebase.initializeApp();
+//   runApp(MyApp());
+// }
+
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   await Firebase.initializeApp();
+//   runApp(MyApp());
+// }
 
 class MyApp extends StatelessWidget {
   @override
@@ -66,17 +81,16 @@ class MyHomePage extends StatelessWidget {
                     onPressed: () {
                       print("Button Pressed - Navigating to PickDest");
                       Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => PickDest(),
+                        builder: (context) => StartingPointPage(),
                       ));
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
                     ),
-                    child: const Text('Start Searching',
-                        style: TextStyle(color: Colors.black)),
+                    child: const Text('Start Searching', style: TextStyle(color: Colors.black)),
                   ),
                   const SizedBox(height: 16.0),
-                  const Text(
+                   const Text(
                     'Admin: ',
                     style: TextStyle(
                       fontSize: 16,
@@ -88,14 +102,12 @@ class MyHomePage extends StatelessWidget {
                       print("Button Pressed - Sign in for Admin");
 
                       // Navigate to the adminHome.dart page using the navigator from MaterialApp
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => AdminHomePage()));
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => AdminHomePage()));
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
                     ),
-                    child: const Text('Sign in for Admin',
-                        style: TextStyle(color: Colors.black)),
+                    child: const Text('Sign in for Admin', style: TextStyle(color: Colors.black)),
                   ),
                 ],
               ),

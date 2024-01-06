@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-
 import 'pickUrDest1.dart';
 
 class AdminLoginPage extends StatelessWidget {
-final TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
   @override
@@ -20,9 +19,9 @@ final TextEditingController _usernameController = TextEditingController();
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     TextField(
-                      controller: _usernameController,
+                      controller: _emailController,
                       decoration: const InputDecoration(
-                        labelText: 'Username',
+                        labelText: 'Email',
                       ),
                     ),
                     const SizedBox(height: 16.0),
@@ -36,12 +35,12 @@ final TextEditingController _usernameController = TextEditingController();
                     const SizedBox(height: 16.0),
                     ElevatedButton(
                       onPressed: () {
-                        // Hardcoded username and password for demo purposes
-                        const String validUsername = 'admin';
+                        // Hardcoded email and password for demo purposes
+                        const String validEmail = 'admin@example.com';
                         const String validPassword = 'password';
 
-                        // Check if the entered username and password are valid
-                        if (_usernameController.text == validUsername &&
+                        // Check if the entered email and password are valid
+                        if (_emailController.text == validEmail &&
                             _passwordController.text == validPassword) {
                           print("Admin Login Successful");
                           // Uncomment the lines below when you want to navigate to the next page
@@ -49,11 +48,11 @@ final TextEditingController _usernameController = TextEditingController();
                             builder: (context) => PickUrDest1Page(),
                           ));
                         } else {
-                          print("Invalid Username or Password");
+                          print("Invalid Email or Password");
                           // Show a SnackBar with an error message
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(
-                              content: Text('Invalid Username or Password'),
+                              content: Text('Invalid Email or Password'),
                               duration: Duration(seconds: 2),
                             ),
                           );

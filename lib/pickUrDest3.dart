@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fyp_project/naviGuideCafe_CyberSec.dart';
+import 'naviGuideCafe_CyberSec.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'pickUrDest1.dart';
 import 'pickUrDest2.dart';
@@ -36,7 +36,8 @@ class PickUrDest3Page extends StatelessWidget {
                               Row(
                                 children: [
                                   IconButton(
-                                    icon: const Icon(Icons.search, color: Colors.white),
+                                    icon: const Icon(Icons.search,
+                                        color: Colors.white),
                                     onPressed: () => _showSearchDialog(context),
                                   ),
                                 ],
@@ -68,11 +69,16 @@ class PickUrDest3Page extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              _buildCircularButton(context, '1', PickUrDest1Page()),
-                              _buildCircularButton(context, '2', PickUrDest2Page()),
-                              _buildCircularButton(context, '3', PickUrDest3Page()),
-                              _buildCircularButton(context, '4', PickUrDest1Page()),
-                              _buildCircularButton(context, '5', PickUrDest1Page()),
+                              _buildCircularButton(
+                                  context, '1', PickUrDest1Page()),
+                              _buildCircularButton(
+                                  context, '2', PickUrDest2Page()),
+                              _buildCircularButton(
+                                  context, '3', PickUrDest3Page()),
+                              _buildCircularButton(
+                                  context, '4', PickUrDest1Page()),
+                              _buildCircularButton(
+                                  context, '5', PickUrDest1Page()),
                             ],
                           ),
                           const SizedBox(height: 20.0),
@@ -82,13 +88,22 @@ class PickUrDest3Page extends StatelessWidget {
                             children: [
                               // First row
                               Expanded(
-                                child: ImageWithDescription(imagePath: 'images/UIAM.jpg', description: 'Description 1', url: 'https://www.example.com/1'),
+                                child: ImageWithDescription(
+                                    imagePath: 'images/UIAM.jpg',
+                                    description: 'Description 1',
+                                    url: 'https://www.example.com/1'),
                               ),
                               Expanded(
-                                child: ImageWithDescription(imagePath: 'images/UIAM.jpg', description: 'TBD', url: 'https://www.example.com/2'),
+                                child: ImageWithDescription(
+                                    imagePath: 'images/UIAM.jpg',
+                                    description: 'TBD',
+                                    url: 'https://www.example.com/2'),
                               ),
                               Expanded(
-                                child: ImageWithDescription(imagePath: 'images/UIAM.jpg', description: 'TBD', url: 'https://www.example.com/3'),
+                                child: ImageWithDescription(
+                                    imagePath: 'images/UIAM.jpg',
+                                    description: 'TBD',
+                                    url: 'https://www.example.com/3'),
                               ),
                             ],
                           ),
@@ -105,7 +120,8 @@ class PickUrDest3Page extends StatelessWidget {
     );
   }
 
-  Widget _buildCircularButton(BuildContext context, String label, Widget destination) {
+  Widget _buildCircularButton(
+      BuildContext context, String label, Widget destination) {
     return CircleAvatar(
       radius: 20, // Adjust the radius as needed
       backgroundColor: Colors.white,
@@ -159,7 +175,8 @@ class PickUrDest3Page extends StatelessWidget {
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.black),
               ),
-              child: const Text('Search', style: TextStyle(color: Colors.white)),
+              child:
+                  const Text('Search', style: TextStyle(color: Colors.white)),
             ),
           ],
         );
@@ -173,7 +190,8 @@ class ImageWithDescription extends StatelessWidget {
   final String description;
   final String url;
 
-  const ImageWithDescription({required this.imagePath, required this.description, required this.url});
+  const ImageWithDescription(
+      {required this.imagePath, required this.description, required this.url});
 
   @override
   Widget build(BuildContext context) {
@@ -230,18 +248,18 @@ class ImageWithDescription extends StatelessWidget {
           builder: (context) => NaviGuideCafe_CyberSecPage(),
         ),
       );
-    } 
+    }
     // else if (description == 'Description 2') {
-    // } 
+    // }
     // else if (description == 'Description 3') {
     //   // Handle the destination for the third button
-    // } 
+    // }
     // else if (description == 'Description 4') {
     //   // Handle the destination for the fourth button
-    // } 
+    // }
     // else if (description == 'Description 5') {
     //   // Handle the destination for the fifth button
-    // } 
+    // }
     // else if (description == 'Description 6') {
     //   // Handle the destination for the sixth button
     // }

@@ -1,3 +1,5 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'DpickUrDest5.dart';
@@ -6,10 +8,42 @@ import 'DpickUrDest3.dart';
 import 'DpickUrDest4.dart';
 import 'naviGuideD_gamesmy.dart';
 
-class DPickUrDest1Page extends StatelessWidget {
-  final TextEditingController _searchController = TextEditingController();
+/*void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(const MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: FirestoreImageDisplay(),
+  ));
+}*/
+
+class FirestoreImageDisplay extends StatefulWidget {
+  const FirestoreImageDisplay({super.key});
 
   @override
+  State<FirestoreImageDisplay> createState() => DPickUrDest1Page();
+}
+
+class DPickUrDest1Page extends FirestoreImageDisplay {
+  final TextEditingController _searchController = TextEditingController();
+  late String imageURl;
+  final storage = FirebaseStorage.instance;
+  void initState() {
+    super.initState();
+    imageURl = '';
+    getImageUrl();
+  }
+
+  Future<void> getImageUrl() async {
+    // Get the reference to the image file in Firebase Storage
+    final ref = storage.ref().child('banner.jpg');
+    // Get teh imageUrl to download URL
+    final url = await ref.getDownloadURL();
+    setState(() {
+      imageURl = url;
+    });
+  }
+
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -37,7 +71,8 @@ class DPickUrDest1Page extends StatelessWidget {
                               Row(
                                 children: [
                                   IconButton(
-                                    icon: const Icon(Icons.search, color: Colors.white),
+                                    icon: const Icon(Icons.search,
+                                        color: Colors.white),
                                     onPressed: () => _showSearchDialog(context),
                                   ),
                                 ],
@@ -69,11 +104,16 @@ class DPickUrDest1Page extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              _buildCircularButton(context, '1', DPickUrDest1Page()),
-                              _buildCircularButton(context, '2', DPickUrDest2Page()),
-                              _buildCircularButton(context, '3', DPickUrDest3Page()),
-                              _buildCircularButton(context, '4', DPickUrDest4Page()),
-                              _buildCircularButton(context, '5', DPickUrDest5Page()),
+                              _buildCircularButton(
+                                  context, '1', DPickUrDest1Page()),
+                              _buildCircularButton(
+                                  context, '2', DPickUrDest2Page()),
+                              _buildCircularButton(
+                                  context, '3', DPickUrDest3Page()),
+                              _buildCircularButton(
+                                  context, '4', DPickUrDest4Page()),
+                              _buildCircularButton(
+                                  context, '5', DPickUrDest5Page()),
                             ],
                           ),
                           const SizedBox(height: 20.0),
@@ -155,7 +195,8 @@ class DPickUrDest1Page extends StatelessWidget {
     );
   }
 
-  Widget _buildCircularButton(BuildContext context, String label, Widget destination) {
+  Widget _buildCircularButton(
+      BuildContext context, String label, Widget destination) {
     return CircleAvatar(
       radius: 20,
       backgroundColor: Colors.white,
@@ -209,7 +250,8 @@ class DPickUrDest1Page extends StatelessWidget {
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.black),
               ),
-              child: const Text('Search', style: TextStyle(color: Colors.white)),
+              child:
+                  const Text('Search', style: TextStyle(color: Colors.white)),
             ),
           ],
         );
@@ -223,7 +265,8 @@ class ImageWithDescription extends StatelessWidget {
   final String description;
   final String url;
 
-  const ImageWithDescription({required this.imagePath, required this.description, required this.url});
+  const ImageWithDescription(
+      {required this.imagePath, required this.description, required this.url});
 
   @override
   Widget build(BuildContext context) {
@@ -274,7 +317,6 @@ class ImageWithDescription extends StatelessWidget {
   void _handleFindButtonPress(BuildContext context) {
     // Modify the logic based on your requirements
     if (description == 'Description 1') {
-
     } else if (description == 'Description 2') {
       // Handle the destination for the second button
     } else if (description == 'Description 3') {
@@ -284,17 +326,13 @@ class ImageWithDescription extends StatelessWidget {
           builder: (context) => NaviGuideD_GamesMyPage(),
         ),
       );
-    } 
-    else if (description == 'Description 4') {
+    } else if (description == 'Description 4') {
       // Handle the destination for the fourth button
-    } 
-    else if (description == 'Description 5') {
+    } else if (description == 'Description 5') {
       // Handle the destination for the fifth button
-    } 
-    else if (description == 'Description 6') {
+    } else if (description == 'Description 6') {
       // Handle the destination for the sixth button
-    }
-    else if (description == 'Description 7') {
+    } else if (description == 'Description 7') {
       // Handle the destination for the sixth button
     }
   }

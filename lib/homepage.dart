@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'pickDest.dart';
 import 'adminHome.dart';
 
-void main() {
+Future<void> main() async {
+  // Connets your flutter project with firebase
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 

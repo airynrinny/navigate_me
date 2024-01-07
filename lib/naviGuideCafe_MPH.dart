@@ -33,36 +33,36 @@ class NaviGuideCafe_MHPPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 40.0),
                       ListTile(
-                        leading: Image.asset('images/iium_logo.png'),
+                        leading: Image.asset('images/Cafelv2/1MPH.png'),
                         title: const Text('STEP 1: KICT Cafeteria'),
-                        subtitle: const Text('explanation to go from here'),
+                        subtitle: const Text('Start at Cafe'),
                       ),
                       ListTile(
-                      leading: Image.asset('images/iium_logo.png'), // Replace 'step2.jpg' with your actual image path
-                      title: const Text('STEP 2: Name of place'),
-                      subtitle: const Text('explanation to go from here'),
+                      leading: Image.asset('images/Cafelv2/2MPH.png'), // Replace 'step2.jpg' with your actual image path
+                      title: const Text('STEP 2: Junction'),
+                      subtitle: const Text('Go to the left where you see the stairs'),
                     ),
                      ListTile(
-                      leading: Image.asset('images/iium_logo.png'), // Replace 'step3.jpg' with your actual image path
-                      title: const Text('STEP 3: Name of place'),
-                      subtitle: const Text('explanation to go from here'),
+                      leading: Image.asset('images/Cafelv2/3MPH.png'), // Replace 'step3.jpg' with your actual image path
+                      title: const Text('STEP 3: Go upstairs'),
+                      subtitle: const Text('Go up the stairs to 2nd floor'),
                     ),
                      ListTile(
-                      leading: Image.asset('images/iium_logo.png'), // Replace 'step4.jpg' with your actual image path
-                      title: const Text('STEP 4: Name of place'),
-                      subtitle: const Text('explanation to go from here'),
+                      leading: Image.asset('images/Cafelv2/4MPH.png'), // Replace 'step4.jpg' with your actual image path
+                      title: const Text('STEP 4: End of stairs'),
+                      subtitle: const Text('After go up stairs, on the right MPH'),
                     ),
                      ListTile(
-                      leading: Image.asset('images/iium_logo.png'), // Replace 'step5.jpg' with your actual image path
+                      leading: Image.asset('images/Cafelv2/5MPH.png'), // Replace 'step5.jpg' with your actual image path
                       title: const Text('STEP 5: You have arrived!'),
-                      subtitle: const Text('explanation to go from here'),
+                      subtitle: const Text('This is the Multipurpose Hall'),
                     ),
-                      ListTile(
-                        title: const Text('JUMP TO STEP'),
-                        onTap: () {
-                          // navigate to desired step
-                        },
-                      ),
+                      // ListTile(
+                      //   title: const Text('JUMP TO STEP'),
+                      //   onTap: () {
+                      //     // navigate to desired step
+                      //   },
+                      // ),
                     ],
                   ),
                 ],

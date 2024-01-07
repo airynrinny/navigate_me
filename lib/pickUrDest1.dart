@@ -3,6 +3,8 @@ import 'package:url_launcher/url_launcher.dart';
 import 'naviGuideCafe_StdLounge.dart';
 import 'pickUrDest2.dart';
 import 'pickUrDest3.dart';
+import 'pickUrDest4.dart';
+import 'pickUrDest5.dart';
 
 class PickUrDest1Page extends StatelessWidget {
   final TextEditingController _searchController = TextEditingController();
@@ -35,7 +37,8 @@ class PickUrDest1Page extends StatelessWidget {
                               Row(
                                 children: [
                                   IconButton(
-                                    icon: const Icon(Icons.search, color: Colors.white),
+                                    icon: const Icon(Icons.search,
+                                        color: Colors.white),
                                     onPressed: () => _showSearchDialog(context),
                                   ),
                                 ],
@@ -44,7 +47,7 @@ class PickUrDest1Page extends StatelessWidget {
                               const Column(
                                 children: [
                                   Text(
-                                    '1Navigate Me',
+                                    'Navigate Me',
                                     style: TextStyle(
                                       fontSize: 44,
                                       fontWeight: FontWeight.bold,
@@ -52,7 +55,7 @@ class PickUrDest1Page extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    'Pick Your Destination',
+                                    'Pick Your Destination - Level 1',
                                     style: TextStyle(
                                       fontSize: 22,
                                       fontWeight: FontWeight.bold,
@@ -70,8 +73,8 @@ class PickUrDest1Page extends StatelessWidget {
                               _buildCircularButton(context, '1', PickUrDest1Page()),
                               _buildCircularButton(context, '2', PickUrDest2Page()),
                               _buildCircularButton(context, '3', PickUrDest3Page()),
-                              _buildCircularButton(context, '4', PickUrDest1Page()),
-                              _buildCircularButton(context, '5', PickUrDest1Page()),
+                              _buildCircularButton(context, '4', PickUrDest4Page()),
+                              _buildCircularButton(context, '5', PickUrDest5Page()),
                             ],
                           ),
                           const SizedBox(height: 20.0),
@@ -80,22 +83,22 @@ class PickUrDest1Page extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/UIAM.jpg',
-                                  description: 'Description 1',
+                                  imagePath: 'images/MultimediaStudio1.png',
+                                  description: 'Male Std Lounge',
                                   url: 'https://www.example.com/1',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/UIAM.jpg',
-                                  description: 'Description 2',
+                                  imagePath: 'images/MultimediaStudio2.png',
+                                  description: 'Female Std Lounge',
                                   url: 'https://www.example.com/2',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/UIAM.jpg',
-                                  description: 'Description 3',
+                                  imagePath: 'images/OR.png',
+                                  description: 'Operation Room',
                                   url: 'https://www.example.com/3',
                                 ),
                               ),
@@ -107,41 +110,41 @@ class PickUrDest1Page extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/iium_logo.png',
-                                  description: 'Description 4',
+                                  imagePath: 'images/MaleMusolla.png',
+                                  description: 'Male Musolla',
                                   url: 'https://www.example.com/4',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/iium_logo.png',
-                                  description: 'Description 5',
+                                  imagePath: 'images/Musollafemale.png',
+                                  description: 'Female Musolla',
                                   url: 'https://www.example.com/5',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/iium_logo.png',
-                                  description: 'Description 6',
+                                  imagePath: 'images/HamzahFansuri.png',
+                                  description: 'Hamzah Fansuri',
                                   url: 'https://www.example.com/6',
                                 ),
                               ),
                             ],
                           ),
-                           const Row(
+                          const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/iium_logo.png',
-                                  description: 'Description 7',
+                                  imagePath: 'images/Gamesmy.png',
+                                  description: 'Gamesmy',
                                   url: 'https://www.example.com/4',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/iium_logo.png',
-                                  description: 'Description 8',
+                                  imagePath: 'images/CITA.png',
+                                  description: 'Centre of IT Advancement',
                                   url: 'https://www.example.com/5',
                                 ),
                               ),
@@ -160,7 +163,8 @@ class PickUrDest1Page extends StatelessWidget {
     );
   }
 
-  Widget _buildCircularButton(BuildContext context, String label, Widget destination) {
+  Widget _buildCircularButton(
+      BuildContext context, String label, Widget destination) {
     return CircleAvatar(
       radius: 20,
       backgroundColor: Colors.white,
@@ -214,7 +218,8 @@ class PickUrDest1Page extends StatelessWidget {
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.black),
               ),
-              child: const Text('Search', style: TextStyle(color: Colors.white)),
+              child:
+                  const Text('Search', style: TextStyle(color: Colors.white)),
             ),
           ],
         );
@@ -228,7 +233,8 @@ class ImageWithDescription extends StatelessWidget {
   final String description;
   final String url;
 
-  const ImageWithDescription({required this.imagePath, required this.description, required this.url});
+  const ImageWithDescription(
+      {required this.imagePath, required this.description, required this.url});
 
   @override
   Widget build(BuildContext context) {
@@ -278,22 +284,26 @@ class ImageWithDescription extends StatelessWidget {
 
   void _handleFindButtonPress(BuildContext context) {
     // Modify the logic based on your requirements
-    if (description == 'Description 1') {
+    if (description == 'Male Std Lounge') {
       Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) => NaviGuideCafe_StdLoungePage(),
         ),
       );
-    } else if (description == 'Description 2') {
+    } else if (description == 'Female Std Lounge') {
       // Handle the destination for the second button
-    } else if (description == 'Description 3') {
+    } else if (description == 'Operation Room') {
       // Handle the destination for the third button
-    } else if (description == 'Description 4') {
+    } else if (description == 'Male Musolla') {
       // Handle the destination for the fourth button
-    } else if (description == 'Description 5') {
+    } else if (description == 'Female Musolla') {
       // Handle the destination for the fifth button
-    } else if (description == 'Description 6') {
+    } else if (description == 'Hamzah Fansuri') {
+      // Handle the destination for the sixth button
+    } else if (description == 'Gamesmy') {
+      // Handle the destination for the sixth button
+    } else if (description == 'Centre of IT Advancement') {
       // Handle the destination for the sixth button
     }
   }

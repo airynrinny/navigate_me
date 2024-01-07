@@ -71,11 +71,16 @@ class DPickUrDest2Page extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              _buildCircularButton(context, '1', DPickUrDest1Page()),
-                              _buildCircularButton(context, '2', DPickUrDest2Page()),
-                              _buildCircularButton(context, '3', DPickUrDest3Page()),
-                              _buildCircularButton(context, '4', DPickUrDest4Page()),
-                              _buildCircularButton(context, '5', DPickUrDest5Page()),
+                              _buildCircularButton(
+                                  context, '1', DPickUrDest1Page()),
+                              _buildCircularButton(
+                                  context, '2', DPickUrDest2Page()),
+                              _buildCircularButton(
+                                  context, '3', DPickUrDest3Page()),
+                              _buildCircularButton(
+                                  context, '4', DPickUrDest4Page()),
+                              _buildCircularButton(
+                                  context, '5', DPickUrDest5Page()),
                             ],
                           ),
                           const SizedBox(height: 20.0),
@@ -86,20 +91,20 @@ class DPickUrDest2Page extends StatelessWidget {
                               // First row
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/UIAM.jpg',
-                                    description: 'Description 1',
+                                    imagePath: 'images/destL2/iat.jpg',
+                                    description: 'IIUM Advancement Technology',
                                     url: 'https://www.example.com/1'),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/UIAM.jpg',
-                                    description: 'Description 2',
+                                    imagePath: 'images/destL2/ibf.jpg',
+                                    description: 'IIiBF',
                                     url: 'https://www.example.com/2'),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/UIAM.jpg',
-                                    description: 'Description 3',
+                                    imagePath: 'images/destL2/ibfl.jpg',
+                                    description: 'IIiBF Library',
                                     url: 'https://www.example.com/3'),
                               ),
                             ],
@@ -111,14 +116,15 @@ class DPickUrDest2Page extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/iium_logo.png',
-                                    description: 'Description 4',
+                                    imagePath: 'images/destL2/mph.png',
+                                    description: 'KICT Multipurpose Hall',
                                     url: 'https://www.example.com/4'),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/iium_logo.png',
-                                    description: 'Description 5',
+                                    imagePath: 'images/destL2/pg.png',
+                                    description:
+                                        'Office of Deputy Dean (Postgraduate & Research)',
                                     url: 'https://www.example.com/5'),
                               ),
                             ],
@@ -270,7 +276,7 @@ class ImageWithDescription extends StatelessWidget {
       // Handle the destination for the fourth button
     } else if (description == 'Description 5') {
       // Handle the destination for the fifth button
-    } 
+    }
     // else if (description == 'Description 6') {
     //   // Handle the destination for the sixth button
     // }

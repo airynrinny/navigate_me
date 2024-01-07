@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'pickUrDest1.dart';
+import 'DpickUrDest1.dart';
 
 class StartingPointPage extends StatelessWidget {
   final TextEditingController _searchController = TextEditingController();
@@ -34,7 +35,8 @@ class StartingPointPage extends StatelessWidget {
                               Row(
                                 children: [
                                   IconButton(
-                                    icon: const Icon(Icons.search, color: Colors.white),
+                                    icon: const Icon(Icons.search,
+                                        color: Colors.white),
                                     onPressed: () => _showSearchDialog(context),
                                   ),
                                 ],
@@ -61,7 +63,7 @@ class StartingPointPage extends StatelessWidget {
                                 ],
                               ),
                             ],
-                          ),        
+                          ),
                           const SizedBox(height: 20.0),
                           // Two rows of images with descriptions
                           const Row(
@@ -69,7 +71,10 @@ class StartingPointPage extends StatelessWidget {
                             children: [
                               // First row
                               Expanded(
-                                child: ImageWithDescription(imagePath: 'images/block_d.jpg', description: 'Block D', url: 'https://www.example.com/2'),
+                                child: ImageWithDescription(
+                                    imagePath: 'images/block_d.jpg',
+                                    description: 'Block D',
+                                    url: 'https://www.example.com/2'),
                               ),
                             ],
                           ),
@@ -79,7 +84,10 @@ class StartingPointPage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Expanded(
-                                child: ImageWithDescription(imagePath: 'images/cafe.png', description: 'KICT Cafeteria', url: 'https://www.example.com/1'),
+                                child: ImageWithDescription(
+                                    imagePath: 'images/cafe.png',
+                                    description: 'KICT Cafeteria',
+                                    url: 'https://www.example.com/1'),
                               ),
                             ],
                           ),
@@ -96,7 +104,8 @@ class StartingPointPage extends StatelessWidget {
     );
   }
 
-  Widget _buildCircularButton(BuildContext context, String label, Widget destination) {
+  Widget _buildCircularButton(
+      BuildContext context, String label, Widget destination) {
     return CircleAvatar(
       radius: 20, // Adjust the radius as needed
       backgroundColor: Colors.white,
@@ -150,7 +159,8 @@ class StartingPointPage extends StatelessWidget {
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.black),
               ),
-              child: const Text('Search', style: TextStyle(color: Colors.white)),
+              child:
+                  const Text('Search', style: TextStyle(color: Colors.white)),
             ),
           ],
         );
@@ -164,7 +174,8 @@ class ImageWithDescription extends StatelessWidget {
   final String description;
   final String url;
 
-  const ImageWithDescription({required this.imagePath, required this.description, required this.url});
+  const ImageWithDescription(
+      {required this.imagePath, required this.description, required this.url});
 
   @override
   Widget build(BuildContext context) {
@@ -193,11 +204,13 @@ class ImageWithDescription extends StatelessWidget {
         const SizedBox(height: 8.0),
         ElevatedButton(
           onPressed: () {
-                      print("Button Pressed - Sign in for Admin");
+            print("Button Pressed - Sign in for Admin");
 
-                      // Navigate to the adminHome.dart page using the navigator from MaterialApp
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => PickUrDest1Page()));
-                    },
+            // Navigate to the adminHome.dart page using the navigator from MaterialApp
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => PickUrDest1Page()),
+            );
+          },
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(Colors.white),
           ),

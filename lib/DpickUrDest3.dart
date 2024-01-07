@@ -71,11 +71,16 @@ class DPickUrDest3Page extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              _buildCircularButton(context, '1', DPickUrDest1Page()),
-                              _buildCircularButton(context, '2', DPickUrDest2Page()),
-                              _buildCircularButton(context, '3', DPickUrDest3Page()),
-                              _buildCircularButton(context, '4', DPickUrDest4Page()),
-                              _buildCircularButton(context, '5', DPickUrDest5Page()),
+                              _buildCircularButton(
+                                  context, '1', DPickUrDest1Page()),
+                              _buildCircularButton(
+                                  context, '2', DPickUrDest2Page()),
+                              _buildCircularButton(
+                                  context, '3', DPickUrDest3Page()),
+                              _buildCircularButton(
+                                  context, '4', DPickUrDest4Page()),
+                              _buildCircularButton(
+                                  context, '5', DPickUrDest5Page()),
                             ],
                           ),
                           const SizedBox(height: 20.0),
@@ -86,21 +91,10 @@ class DPickUrDest3Page extends StatelessWidget {
                               // First row
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/UIAM.jpg',
-                                    description: 'Description 1',
+                                    imagePath: 'images/destL3/cyber.jpg',
+                                    description:
+                                        'Cyber Security Centre of Excellence',
                                     url: 'https://www.example.com/1'),
-                              ),
-                              Expanded(
-                                child: ImageWithDescription(
-                                    imagePath: 'images/UIAM.jpg',
-                                    description: 'TBD',
-                                    url: 'https://www.example.com/2'),
-                              ),
-                              Expanded(
-                                child: ImageWithDescription(
-                                    imagePath: 'images/UIAM.jpg',
-                                    description: 'TBD',
-                                    url: 'https://www.example.com/3'),
                               ),
                             ],
                           ),
@@ -245,13 +239,8 @@ class ImageWithDescription extends StatelessWidget {
           builder: (context) => NaviGuideD_CyberSecPage(),
         ),
       );
-    }
-    else if (description == 'Description 2') {
-
-    }
-    else if (description == 'Description 3') {
-      
-    }
+    } else if (description == 'Description 2') {
+    } else if (description == 'Description 3') {}
     // else if (description == 'Description 4') {
     //   // Handle the destination for the fourth button
     // }

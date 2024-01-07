@@ -4,12 +4,47 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
+        {
+            "name": "main",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib\\main.dart"
+        },
         {
             "name": "startingPoint",
             "request": "launch",
             "type": "dart",
             "program": "lib\\startingPoint.dart"
+        },
+        {
+            "name": "DpickUrDest1",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib\\DpickUrDest1.dart"
+        },
+        {
+            "name": "DpickUrDest2",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib\\DpickUrDest2.dart"
+        },
+        {
+            "name": "DpickUrDest3",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib\\DpickUrDest3.dart"
+        },
+        {
+            "name": "DpickUrDest4",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib\\DpickUrDest4.dart"
+        },
+        {
+            "name": "DpickUrDest5",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib\\DpickUrDest5.dart"
         },
         {
             "name": "naviGuideD-Cafe",

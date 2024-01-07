@@ -16,8 +16,51 @@
             "request": "launch",
             "type": "dart",
             "program": "lib\\naviGuideD-Cafe.dart"
-        }
-        ,
+        },
+        {
+            "name": "naviGuideD_CyberSec",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib\\naviGuideD_CyberSec.dart"
+        },
+        {
+            "name": "naviGuideD_DIS",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib\\naviGuideD_DIS.dart"
+        },
+        {
+            "name": "naviGuideD_gamesmy",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib\\naviGuideD_gamesmy.dart"
+        },
+        {
+            "name": "naviGuideD_GO",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib\\naviGuideD_GO.dart"
+        },
+        {
+            "name": "naviGuideD_liBFlib",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib\\naviGuideD_liBFlib.dart"
+        },
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
         {
             "name": "Flutter (lib\\navi_guide.dart)",
             "type": "dart",

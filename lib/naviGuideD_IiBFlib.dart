@@ -25,49 +25,53 @@ class NaviGuideD_IiBFlibPage extends StatelessWidget {
                     children: [
                       const Text(
                         'NavigateMe',
-                        style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 40, fontWeight: FontWeight.bold),
                       ),
                       const Text(
-                        'Starting point: Cafe',
-                        style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                        'Starting point: Block D',
+                        style: TextStyle(
+                            fontSize: 28, fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 40.0),
                       ListTile(
-                        leading: Image.asset('images/iium_logo.png'),
-                        title: const Text('STEP 1: KICT Cafeteria'),
+                        leading: Image.asset('images/blockd-IIiBFlib/1.png'),
+                        title: const Text(
+                            'STEP 1: Take the elevator and go to Level 2'),
                         subtitle: const Text('explanation to go from here'),
                       ),
                       ListTile(
-                      leading: Image.asset('images/iium_logo.png'), // Replace 'step2.jpg' with your actual image path
-                      title: const Text('STEP 2: Name of place'),
-                      subtitle: const Text('explanation to go from here'),
-                    ),
-                     ListTile(
-                      leading: Image.asset('images/iium_logo.png'), // Replace 'step3.jpg' with your actual image path
-                      title: const Text('STEP 3: Name of place'),
-                      subtitle: const Text('explanation to go from here'),
-                    ),
-                     ListTile(
-                      leading: Image.asset('images/iium_logo.png'), // Replace 'step4.jpg' with your actual image path
-                      title: const Text('STEP 4: Name of place'),
-                      subtitle: const Text('explanation to go from here'),
-                    ),
-                     ListTile(
-                      leading: Image.asset('images/iium_logo.png'), // Replace 'step4.jpg' with your actual image path
-                      title: const Text('STEP 5: Name of place'),
-                      subtitle: const Text('explanation to go from here'),
-                    ),
-                     ListTile(
-                      leading: Image.asset('images/iium_logo.png'), // Replace 'step4.jpg' with your actual image path
-                      title: const Text('STEP 6: Name of place'),
-                      subtitle: const Text('explanation to go from here'),
-                    ),
-                    // ListTile(
-                    //     title: const Text('JUMP TO STEP'),
-                    //     onTap: () {
-                    //       // navigate to desired step
-                    //     },
-                    //   ),
+                        leading: Image.asset(
+                            'images/blockd-IIiBFlib/2.png'), // Replace 'step2.jpg' with your actual image path
+                        title: const Text('STEP 2: Turn right'),
+                        subtitle: const Text('explanation to go from here'),
+                      ),
+                      ListTile(
+                        leading: Image.asset(
+                            'images/blockd-IIiBFlib/3.png'), // Replace 'step3.jpg' with your actual image path
+                        title: const Text(
+                            'STEP 3: Go straight until you see fake plant'),
+                        subtitle: const Text('explanation to go from here'),
+                      ),
+                      ListTile(
+                        leading: Image.asset(
+                            'images/blockd-IIiBFlib/4.png'), // Replace 'step4.jpg' with your actual image path
+                        title: const Text(
+                            'STEP 4: Turn to the room on your right after reaching the fake plant'),
+                        subtitle: const Text('explanation to go from here'),
+                      ),
+                      ListTile(
+                        leading: Image.asset(
+                            'images/blockd-IIiBFlib/5.png'), // Replace 'step4.jpg' with your actual image path
+                        title: const Text('You have arrived!'),
+                        subtitle: const Text('explanation to go from here'),
+                      ),
+                      // ListTile(
+                      //     title: const Text('JUMP TO STEP'),
+                      //     onTap: () {
+                      //       // navigate to desired step
+                      //     },
+                      //   ),
                     ],
                   ),
                 ],

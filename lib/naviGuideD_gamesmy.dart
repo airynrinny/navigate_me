@@ -25,34 +25,39 @@ class NaviGuideD_GamesMyPage extends StatelessWidget {
                     children: [
                       const Text(
                         'NavigateMe',
-                        style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 40, fontWeight: FontWeight.bold),
                       ),
                       const Text(
                         'Starting point: Cafe',
-                        style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 28, fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 40.0),
                       ListTile(
-                        leading: Image.asset('images/iium_logo.png'),
-                        title: const Text('STEP 1: KICT Cafeteria'),
+                        leading: Image.asset('images/blockd-games/1.png'),
+                        title: const Text('STEP 1: Go straight and turn right'),
                         subtitle: const Text('explanation to go from here'),
                       ),
                       ListTile(
-                      leading: Image.asset('images/iium_logo.png'), // Replace 'step2.jpg' with your actual image path
-                      title: const Text('STEP 2: Name of place'),
-                      subtitle: const Text('explanation to go from here'),
-                    ),
-                     ListTile(
-                      leading: Image.asset('images/iium_logo.png'), // Replace 'step3.jpg' with your actual image path
-                      title: const Text('STEP 3: Name of place'),
-                      subtitle: const Text('explanation to go from here'),
-                    ),
-                    // ListTile(
-                    //     title: const Text('JUMP TO STEP'),
-                    //     onTap: () {
-                    //       // navigate to desired step
-                    //     },
-                    //   ),
+                        leading: Image.asset(
+                            'images/blockd-games/2.png'), // Replace 'step2.jpg' with your actual image path
+                        title: const Text(
+                            'STEP 2: You will see a black door on your right'),
+                        subtitle: const Text('explanation to go from here'),
+                      ),
+                      ListTile(
+                        leading: Image.asset(
+                            'images/blockd-games/3.png'), // Replace 'step3.jpg' with your actual image path
+                        title: const Text('You have arrived!'),
+                        subtitle: const Text('explanation to go from here'),
+                      ),
+                      // ListTile(
+                      //     title: const Text('JUMP TO STEP'),
+                      //     onTap: () {
+                      //       // navigate to desired step
+                      //     },
+                      //   ),
                     ],
                   ),
                 ],

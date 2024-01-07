@@ -4,7 +4,6 @@ import 'adminHome.dart';
 import 'startingPoint.dart';
 // import 'package:firebase_core/firebase_core.dart';
 
-
 void main() {
   runApp(MyApp());
 }
@@ -87,10 +86,11 @@ class MyHomePage extends StatelessWidget {
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
                     ),
-                    child: const Text('Start Searching', style: TextStyle(color: Colors.black)),
+                    child: const Text('Start Searching',
+                        style: TextStyle(color: Colors.black)),
                   ),
                   const SizedBox(height: 16.0),
-                   const Text(
+                  const Text(
                     'Admin: ',
                     style: TextStyle(
                       fontSize: 16,
@@ -102,12 +102,14 @@ class MyHomePage extends StatelessWidget {
                       print("Button Pressed - Sign in for Admin");
 
                       // Navigate to the adminHome.dart page using the navigator from MaterialApp
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => AdminHomePage()));
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => AdminHomePage()));
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
                     ),
-                    child: const Text('Sign in for Admin', style: TextStyle(color: Colors.black)),
+                    child: const Text('Sign in for Admin',
+                        style: TextStyle(color: Colors.black)),
                   ),
                 ],
               ),

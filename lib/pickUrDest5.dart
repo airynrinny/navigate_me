@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:navigate_me/naviGuideCafe_ConfRoom.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'naviGuideCafe_ConfRoom.dart';
+//import 'naviGuideCafe_ConfRoom.dart';
 import 'pickUrDest1.dart';
 import 'pickUrDest2.dart';
 import 'pickUrDest3.dart';

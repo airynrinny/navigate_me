@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fyp_project/naviGuideCafe_ConfRoom.dart';
+import 'package:navigate_me/naviGuideCafe_ConfRoom.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'naviGuideCafe_ConfRoom.dart';
 import 'pickUrDest1.dart';
 import 'pickUrDest2.dart';
 import 'pickUrDest3.dart';
@@ -37,7 +38,8 @@ class PickUrDest5Page extends StatelessWidget {
                               Row(
                                 children: [
                                   IconButton(
-                                    icon: const Icon(Icons.search, color: Colors.white),
+                                    icon: const Icon(Icons.search,
+                                        color: Colors.white),
                                     onPressed: () => _showSearchDialog(context),
                                   ),
                                 ],
@@ -69,11 +71,16 @@ class PickUrDest5Page extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              _buildCircularButton(context, '1', PickUrDest1Page()),
-                              _buildCircularButton(context, '2', PickUrDest2Page()),
-                              _buildCircularButton(context, '3', PickUrDest3Page()),
-                              _buildCircularButton(context, '4', PickUrDest4Page()),
-                              _buildCircularButton(context, '5', PickUrDest5Page()),
+                              _buildCircularButton(
+                                  context, '1', PickUrDest1Page()),
+                              _buildCircularButton(
+                                  context, '2', PickUrDest2Page()),
+                              _buildCircularButton(
+                                  context, '3', PickUrDest3Page()),
+                              _buildCircularButton(
+                                  context, '4', PickUrDest4Page()),
+                              _buildCircularButton(
+                                  context, '5', PickUrDest5Page()),
                             ],
                           ),
                           const SizedBox(height: 20.0),
@@ -116,7 +123,8 @@ class PickUrDest5Page extends StatelessWidget {
     );
   }
 
-  Widget _buildCircularButton(BuildContext context, String label, Widget destination) {
+  Widget _buildCircularButton(
+      BuildContext context, String label, Widget destination) {
     return CircleAvatar(
       radius: 20,
       backgroundColor: Colors.white,
@@ -170,7 +178,8 @@ class PickUrDest5Page extends StatelessWidget {
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.black),
               ),
-              child: const Text('Search', style: TextStyle(color: Colors.white)),
+              child:
+                  const Text('Search', style: TextStyle(color: Colors.white)),
             ),
           ],
         );
@@ -184,7 +193,8 @@ class ImageWithDescription extends StatelessWidget {
   final String description;
   final String url;
 
-  const ImageWithDescription({required this.imagePath, required this.description, required this.url});
+  const ImageWithDescription(
+      {required this.imagePath, required this.description, required this.url});
 
   @override
   Widget build(BuildContext context) {
@@ -241,19 +251,16 @@ class ImageWithDescription extends StatelessWidget {
           builder: (context) => NaviGuideCafe_ConfRoomPage(),
         ),
       );
-    } 
-    else if (description == 'General Office') {
-      
-    } 
+    } else if (description == 'General Office') {}
     // else if (description == 'Description 3') {
     //   // Handle the destination for the third button
-    // } 
+    // }
     // else if (description == 'Description 4') {
     //   // Handle the destination for the fourth button
-    // } 
+    // }
     // else if (description == 'Description 5') {
     //   // Handle the destination for the fifth button
-    // } 
+    // }
     // else if (description == 'Description 6') {
     //   // Handle the destination for the sixth button
     // }

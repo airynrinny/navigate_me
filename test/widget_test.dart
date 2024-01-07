@@ -7,6 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:navigate_me/main.dart';
 import 'package:navigate_me/naviGuideD-Cafe.dart';
 
 import 'package:navigate_me/startingPoint.dart';

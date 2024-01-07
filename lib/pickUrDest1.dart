@@ -83,21 +83,21 @@ class PickUrDest1Page extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/MultimediaStudio1.png',
+                                  imagePath: 'images/Cafelv1/MultimediaStudio1.png',
                                   description: 'Male Std Lounge',
                                   url: 'https://www.example.com/1',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/MultimediaStudio2.png',
+                                  imagePath: 'images/Cafelv1/MultimediaStudio2.png',
                                   description: 'Female Std Lounge',
                                   url: 'https://www.example.com/2',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/OR.png',
+                                  imagePath: 'images/Cafelv1/OR.png',
                                   description: 'Operation Room',
                                   url: 'https://www.example.com/3',
                                 ),
@@ -110,21 +110,21 @@ class PickUrDest1Page extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/MaleMusolla.png',
+                                  imagePath: 'images/Cafelv1/MaleMusolla.png',
                                   description: 'Male Musolla',
                                   url: 'https://www.example.com/4',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/Musollafemale.png',
+                                  imagePath: 'images/Cafelv1/Musollafemale.png',
                                   description: 'Female Musolla',
                                   url: 'https://www.example.com/5',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/HamzahFansuri.png',
+                                  imagePath: 'images/Cafelv1/HamzahFansuri.png',
                                   description: 'Hamzah Fansuri',
                                   url: 'https://www.example.com/6',
                                 ),
@@ -136,14 +136,14 @@ class PickUrDest1Page extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/Gamesmy.png',
+                                  imagePath: 'images/Cafelv1/Gamesmy.png',
                                   description: 'Gamesmy',
                                   url: 'https://www.example.com/4',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/CITA.png',
+                                  imagePath: 'images/Cafelv1/CITA.png',
                                   description: 'Centre of IT Advancement',
                                   url: 'https://www.example.com/5',
                                 ),
@@ -285,14 +285,14 @@ class ImageWithDescription extends StatelessWidget {
   void _handleFindButtonPress(BuildContext context) {
     // Modify the logic based on your requirements
     if (description == 'Male Std Lounge') {
+      
+    } else if (description == 'Female Std Lounge') {
       Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) => NaviGuideCafe_StdLoungePage(),
         ),
       );
-    } else if (description == 'Female Std Lounge') {
-      // Handle the destination for the second button
     } else if (description == 'Operation Room') {
       // Handle the destination for the third button
     } else if (description == 'Male Musolla') {

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'naviGuideCafe_MPH.dart';
+import 'package:fyp_project/naviGuideCafe_MPH.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'pickUrDest1.dart';
 import 'pickUrDest3.dart';
+import 'pickUrDest4.dart';
+import 'pickUrDest5.dart';
 
 class PickUrDest2Page extends StatelessWidget {
   final TextEditingController _searchController = TextEditingController();
@@ -46,7 +48,7 @@ class PickUrDest2Page extends StatelessWidget {
                               const Column(
                                 children: [
                                   Text(
-                                    '2Navigate Me',
+                                    '2CNavigate Me',
                                     style: TextStyle(
                                       fontSize: 44,
                                       fontWeight: FontWeight.bold,
@@ -69,16 +71,11 @@ class PickUrDest2Page extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              _buildCircularButton(
-                                  context, '1', PickUrDest1Page()),
-                              _buildCircularButton(
-                                  context, '2', PickUrDest2Page()),
-                              _buildCircularButton(
-                                  context, '3', PickUrDest3Page()),
-                              _buildCircularButton(
-                                  context, '4', PickUrDest1Page()),
-                              _buildCircularButton(
-                                  context, '5', PickUrDest1Page()),
+                              _buildCircularButton(context, '1', PickUrDest1Page()),
+                              _buildCircularButton(context, '2', PickUrDest2Page()),
+                              _buildCircularButton(context, '3', PickUrDest3Page()),
+                              _buildCircularButton(context, '4', PickUrDest4Page()),
+                              _buildCircularButton(context, '5', PickUrDest5Page()),
                             ],
                           ),
                           const SizedBox(height: 20.0),
@@ -89,20 +86,20 @@ class PickUrDest2Page extends StatelessWidget {
                               // First row
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/UIAM.jpg',
-                                    description: 'Description 1',
+                                    imagePath: 'images/Cafelv2/5MPH.png',
+                                    description: 'MPH',
                                     url: 'https://www.example.com/1'),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/UIAM.jpg',
-                                    description: 'Description 2',
+                                    imagePath: 'images/Cafelv2/PGOffice.png',
+                                    description: 'PG Office',
                                     url: 'https://www.example.com/2'),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/UIAM.jpg',
-                                    description: 'Description 3',
+                                    imagePath: 'images/Cafelv2/IIBFLib.png',
+                                    description: 'IiBF Library',
                                     url: 'https://www.example.com/3'),
                               ),
                             ],
@@ -114,14 +111,14 @@ class PickUrDest2Page extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/iium_logo.png',
-                                    description: 'Description 4',
+                                    imagePath: 'images/Cafelv2/IIBF.png',
+                                    description: 'IiBF',
                                     url: 'https://www.example.com/4'),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/iium_logo.png',
-                                    description: 'Description 5',
+                                    imagePath: 'images/Cafelv2/IAT.png',
+                                    description: 'IAT',
                                     url: 'https://www.example.com/5'),
                               ),
                             ],
@@ -260,22 +257,24 @@ class ImageWithDescription extends StatelessWidget {
 
   void _handleFindButtonPress(BuildContext context) {
     // Modify the logic based on your requirements
-    if (description == 'Description 1') {
-    } else if (description == 'Description 2') {
+    if (description == 'MPH') {
       Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) => NaviGuideCafe_MHPPage(),
         ),
       );
-    } else if (description == 'Description 3') {
-      // Handle the destination for the third button
-    } else if (description == 'Description 4') {
-      // Handle the destination for the fourth button
-    } else if (description == 'Description 5') {
-      // Handle the destination for the fifth button
-    } else if (description == 'Description 6') {
-      // Handle the destination for the sixth button
-    }
+    } else if (description == 'PG Office') {
+      
+    } else if (description == 'IiBF Library') {
+      
+    } else if (description == 'IiBF') {
+
+    } else if (description == 'IAT') {
+
+    } 
+    // else if (description == 'Description 6') {
+    //   // Handle the destination for the sixth button
+    // }
   }
 }

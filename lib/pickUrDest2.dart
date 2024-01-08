@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'naviGuideCafe_MPH.dart';
+import 'package:fyp_project/naviGuideCafe_MPH.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'pickUrDest1.dart';
 import 'pickUrDest3.dart';
+import 'pickUrDest4.dart';
+import 'pickUrDest5.dart';
 
 class PickUrDest2Page extends StatelessWidget {
   final TextEditingController _searchController = TextEditingController();
@@ -15,7 +17,7 @@ class PickUrDest2Page extends StatelessWidget {
           fit: StackFit.expand,
           children: [
             Image.asset(
-              "images/pickDestBG.png",
+              "assets/images/pickDestBG.png",
               fit: BoxFit.cover,
             ),
             // Centered content
@@ -46,7 +48,7 @@ class PickUrDest2Page extends StatelessWidget {
                               const Column(
                                 children: [
                                   Text(
-                                    '2Navigate Me',
+                                    'Navigate Me',
                                     style: TextStyle(
                                       fontSize: 44,
                                       fontWeight: FontWeight.bold,
@@ -54,7 +56,7 @@ class PickUrDest2Page extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    'Pick Your Destination',
+                                    'Pick Your Destination - Level 2',
                                     style: TextStyle(
                                       fontSize: 22,
                                       fontWeight: FontWeight.bold,
@@ -69,16 +71,11 @@ class PickUrDest2Page extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              _buildCircularButton(
-                                  context, '1', PickUrDest1Page()),
-                              _buildCircularButton(
-                                  context, '2', PickUrDest2Page()),
-                              _buildCircularButton(
-                                  context, '3', PickUrDest3Page()),
-                              _buildCircularButton(
-                                  context, '4', PickUrDest1Page()),
-                              _buildCircularButton(
-                                  context, '5', PickUrDest1Page()),
+                              _buildCircularButton(context, '1', PickUrDest1Page()),
+                              _buildCircularButton(context, '2', PickUrDest2Page()),
+                              _buildCircularButton(context, '3', PickUrDest3Page()),
+                              _buildCircularButton(context, '4', PickUrDest4Page()),
+                              _buildCircularButton(context, '5', PickUrDest5Page()),
                             ],
                           ),
                           const SizedBox(height: 20.0),
@@ -89,20 +86,20 @@ class PickUrDest2Page extends StatelessWidget {
                               // First row
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/UIAM.jpg',
-                                    description: 'Description 1',
+                                    imagePath: 'assets/images/Cafelv2/5MPH.png',
+                                    description: 'MPH',
                                     url: 'https://www.example.com/1'),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/UIAM.jpg',
-                                    description: 'Description 2',
+                                    imagePath: 'assets/images/Cafelv2/PGOffice.png',
+                                    description: 'PG Office',
                                     url: 'https://www.example.com/2'),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/UIAM.jpg',
-                                    description: 'Description 3',
+                                    imagePath: 'assets/images/Cafelv2/IIBFLib.png',
+                                    description: 'IiBF Library',
                                     url: 'https://www.example.com/3'),
                               ),
                             ],
@@ -114,14 +111,14 @@ class PickUrDest2Page extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/iium_logo.png',
-                                    description: 'Description 4',
+                                    imagePath: 'assets/images/Cafelv2/IIBF.png',
+                                    description: 'IiBF',
                                     url: 'https://www.example.com/4'),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/iium_logo.png',
-                                    description: 'Description 5',
+                                    imagePath: 'assets/images/Cafelv2/IAT.png',
+                                    description: 'IAT',
                                     url: 'https://www.example.com/5'),
                               ),
                             ],
@@ -189,6 +186,7 @@ class PickUrDest2Page extends StatelessWidget {
                 String searchQuery = _searchController.text;
                 print("Search Button Pressed with query: $searchQuery");
                 // Add your search functionality here
+                _performSearch(context, searchQuery);
                 Navigator.of(context).pop();
               },
               style: ButtonStyle(
@@ -198,6 +196,50 @@ class PickUrDest2Page extends StatelessWidget {
                   const Text('Search', style: TextStyle(color: Colors.white)),
             ),
           ],
+        );
+      },
+    );
+  }
+
+  void _performSearch(BuildContext context, String searchQuery) {
+    // Implement your search logic here
+    // For example, you can filter the destinations based on the search query
+    List<String> destinations = [
+      'MPH',
+      'PG Office',
+      'IiBF Library',
+      'IiBF',
+      'IAT',
+    ];
+
+    List<String> filteredDestinations = destinations
+        .where((destination) =>
+            destination.toLowerCase().contains(searchQuery.toLowerCase()))
+        .toList();
+
+    // Display the filtered destinations
+    _showSearchResultsDialog(context, filteredDestinations);
+  }
+
+  void _showSearchResultsDialog(
+      BuildContext context, List<String> results) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Search Results'),
+          content: Column(
+            children: results
+                .map((result) => ListTile(
+                      title: Text(result),
+                      // Add logic to navigate to the selected destination when tapped
+                      onTap: () {
+                        // Handle the tap, e.g., navigate to the selected destination
+                        Navigator.pop(context);
+                      },
+                    ))
+                .toList(),
+          ),
         );
       },
     );
@@ -260,22 +302,22 @@ class ImageWithDescription extends StatelessWidget {
 
   void _handleFindButtonPress(BuildContext context) {
     // Modify the logic based on your requirements
-    if (description == 'Description 1') {
-    } else if (description == 'Description 2') {
+    if (description == 'MPH') {
       Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) => NaviGuideCafe_MHPPage(),
         ),
       );
-    } else if (description == 'Description 3') {
-      // Handle the destination for the third button
-    } else if (description == 'Description 4') {
-      // Handle the destination for the fourth button
-    } else if (description == 'Description 5') {
-      // Handle the destination for the fifth button
-    } else if (description == 'Description 6') {
-      // Handle the destination for the sixth button
+    } else if (description == 'PG Office') {
+      // Handle the destination for 'PG Office'
+    } else if (description == 'IiBF Library') {
+      // Handle the destination for 'IiBF Library'
+    } else if (description == 'IiBF') {
+      // Handle the destination for 'IiBF'
+    } else if (description == 'IAT') {
+      // Handle the destination for 'IAT'
     }
+    // Add more conditions if needed for other destinations
   }
 }

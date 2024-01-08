@@ -12,7 +12,7 @@ class AdminHomePage extends StatelessWidget {
           fit: StackFit.expand,
           children: [
             Image.asset(
-              "images/Log_In.png",
+              "assets/images/Log_In.png",
               fit: BoxFit.cover,
             ),
             Center(
@@ -30,7 +30,7 @@ class AdminHomePage extends StatelessWidget {
                   ),
                   const SizedBox(height: 16.0),
                   Image.asset(
-                    'images/iium_logo.png',
+                    'assets/images/iium_logo.png',
                     width: 100,
                     height: 100,
                   ),

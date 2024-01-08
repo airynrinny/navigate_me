@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'naviGuideCafe_CyberSec.dart';
+import 'package:fyp_project/naviGuideCafe_CyberSec.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'pickUrDest1.dart';
 import 'pickUrDest2.dart';
+import 'pickUrDest4.dart';
+import 'pickUrDest5.dart';
 
 class PickUrDest3Page extends StatelessWidget {
   final TextEditingController _searchController = TextEditingController();
@@ -15,7 +17,7 @@ class PickUrDest3Page extends StatelessWidget {
           fit: StackFit.expand,
           children: [
             Image.asset(
-              "images/pickDestBG.png",
+              "assets/images/pickDestBG.png",
               fit: BoxFit.cover,
             ),
             // Centered content
@@ -46,7 +48,7 @@ class PickUrDest3Page extends StatelessWidget {
                               const Column(
                                 children: [
                                   Text(
-                                    '3Navigate Me',
+                                    'Navigate Me',
                                     style: TextStyle(
                                       fontSize: 44,
                                       fontWeight: FontWeight.bold,
@@ -54,7 +56,7 @@ class PickUrDest3Page extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    'Pick Your Destination',
+                                    'Pick Your Destination - Level 3',
                                     style: TextStyle(
                                       fontSize: 22,
                                       fontWeight: FontWeight.bold,
@@ -69,16 +71,11 @@ class PickUrDest3Page extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              _buildCircularButton(
-                                  context, '1', PickUrDest1Page()),
-                              _buildCircularButton(
-                                  context, '2', PickUrDest2Page()),
-                              _buildCircularButton(
-                                  context, '3', PickUrDest3Page()),
-                              _buildCircularButton(
-                                  context, '4', PickUrDest1Page()),
-                              _buildCircularButton(
-                                  context, '5', PickUrDest1Page()),
+                              _buildCircularButton(context, '1', PickUrDest1Page()),
+                              _buildCircularButton(context, '2', PickUrDest2Page()),
+                              _buildCircularButton(context, '3', PickUrDest3Page()),
+                              _buildCircularButton(context, '4', PickUrDest4Page()),
+                              _buildCircularButton(context, '5', PickUrDest5Page()),
                             ],
                           ),
                           const SizedBox(height: 20.0),
@@ -89,19 +86,19 @@ class PickUrDest3Page extends StatelessWidget {
                               // First row
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/UIAM.jpg',
-                                    description: 'Description 1',
+                                    imagePath: 'assets/images/Cafelv3/CyberSecurity.png',
+                                    description: 'Cybersecurity',
                                     url: 'https://www.example.com/1'),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/UIAM.jpg',
+                                    imagePath: 'assets/images/UIAM.jpg',
                                     description: 'TBD',
                                     url: 'https://www.example.com/2'),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/UIAM.jpg',
+                                    imagePath: 'assets/images/UIAM.jpg',
                                     description: 'TBD',
                                     url: 'https://www.example.com/3'),
                               ),
@@ -241,7 +238,7 @@ class ImageWithDescription extends StatelessWidget {
 
   void _handleFindButtonPress(BuildContext context) {
     // Modify the logic based on your requirements
-    if (description == 'Description 1') {
+    if (description == 'Cybersecurity') {
       Navigator.push(
         context,
         MaterialPageRoute(
@@ -249,11 +246,12 @@ class ImageWithDescription extends StatelessWidget {
         ),
       );
     }
-    // else if (description == 'Description 2') {
-    // }
-    // else if (description == 'Description 3') {
-    //   // Handle the destination for the third button
-    // }
+    else if (description == 'TBD') {
+
+    }
+    else if (description == 'TBD') {
+      
+    }
     // else if (description == 'Description 4') {
     //   // Handle the destination for the fourth button
     // }

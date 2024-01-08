@@ -32,37 +32,17 @@ class NaviGuideCafe_MHPPage extends StatelessWidget {
                         style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 40.0),
-                      ListTile(
-                        leading: Image.asset('images/iium_logo.png'),
-                        title: const Text('STEP 1: KICT Cafeteria'),
-                        subtitle: const Text('explanation to go from here'),
-                      ),
-                      ListTile(
-                      leading: Image.asset('images/iium_logo.png'), // Replace 'step2.jpg' with your actual image path
-                      title: const Text('STEP 2: Name of place'),
-                      subtitle: const Text('explanation to go from here'),
-                    ),
-                     ListTile(
-                      leading: Image.asset('images/iium_logo.png'), // Replace 'step3.jpg' with your actual image path
-                      title: const Text('STEP 3: Name of place'),
-                      subtitle: const Text('explanation to go from here'),
-                    ),
-                     ListTile(
-                      leading: Image.asset('images/iium_logo.png'), // Replace 'step4.jpg' with your actual image path
-                      title: const Text('STEP 4: Name of place'),
-                      subtitle: const Text('explanation to go from here'),
-                    ),
-                     ListTile(
-                      leading: Image.asset('images/iium_logo.png'), // Replace 'step5.jpg' with your actual image path
-                      title: const Text('STEP 5: You have arrived!'),
-                      subtitle: const Text('explanation to go from here'),
-                    ),
-                      ListTile(
-                        title: const Text('JUMP TO STEP'),
-                        onTap: () {
-                          // navigate to desired step
-                        },
-                      ),
+                      _buildStep('assets/images/Cafelv2/1MPH.png', 'STEP 1: KICT Cafeteria', 'Start at Cafe'),
+                      _buildStep('assets/images/Cafelv2/2MPH.png', 'STEP 2: Junction', 'Go to the left where you see the stairs'),
+                      _buildStep('assets/images/Cafelv2/3MPH.png', 'STEP 3: Go upstairs', 'Go up the stairs to 2nd floor'),
+                      _buildStep('assets/images/Cafelv2/4MPH.png', 'STEP 4: End of stairs', 'After going up stairs, on the right MPH'),
+                      _buildStep('assets/images/Cafelv2/5MPH.png', 'STEP 5: You have arrived!', 'This is the Multipurpose Hall'),
+                      // ListTile(
+                      //   title: const Text('JUMP TO STEP'),
+                      //   onTap: () {
+                      //     // navigate to desired step
+                      //   },
+                      // ),
                     ],
                   ),
                 ],
@@ -70,6 +50,38 @@ class NaviGuideCafe_MHPPage extends StatelessWidget {
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _buildStep(String imagePath, String title, String subtitle) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Image.asset(
+            imagePath,
+            width: 150,  // Adjust the width as needed
+            height: 150, // Adjust the height as needed
+          ),
+          const SizedBox(width: 16.0),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                ),
+                Text(
+                  subtitle,
+                  style: const TextStyle(fontFamily: 'Times New Roman', fontSize: 16),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

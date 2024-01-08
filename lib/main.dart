@@ -38,7 +38,7 @@ class MyHomePage extends StatelessWidget {
           fit: StackFit.expand,
           children: [
             Image.asset(
-              "images/Homepage.png",
+              "assets/images/Homepage.png",
               fit: BoxFit.cover,
             ),
             Center(
@@ -56,7 +56,7 @@ class MyHomePage extends StatelessWidget {
                   ),
                   const SizedBox(height: 16.0),
                   Image.asset(
-                    'images/iium_logo.png',
+                    'assets/images/iium_logo.png',
                     width: 100,
                     height: 100,
                   ),

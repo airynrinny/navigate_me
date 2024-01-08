@@ -13,7 +13,7 @@ class StartingPointPage extends StatelessWidget {
           fit: StackFit.expand,
           children: [
             Image.asset(
-              "images/startingPointBg.png",
+              "assets/images/startingPointBg.png",
               fit: BoxFit.cover,
             ),
             // Centered content
@@ -71,7 +71,7 @@ class StartingPointPage extends StatelessWidget {
                               // First row
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/block_d.jpg',
+                                    imagePath: 'assets/images/block_d.jpg',
                                     description: 'Block D',
                                     url: 'https://www.example.com/2'),
                               ),
@@ -84,7 +84,7 @@ class StartingPointPage extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/cafe.png',
+                                    imagePath: 'assets/images/cafe.png',
                                     description: 'KICT Cafeteria',
                                     url: 'https://www.example.com/1'),
                               ),

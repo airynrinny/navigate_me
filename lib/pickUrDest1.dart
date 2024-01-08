@@ -17,7 +17,7 @@ class PickUrDest1Page extends StatelessWidget {
           fit: StackFit.expand,
           children: [
             Image.asset(
-              "images/pickDestBG.png",
+              "assets/images/pickDestBG.png",
               fit: BoxFit.cover,
             ),
             Center(
@@ -83,21 +83,21 @@ class PickUrDest1Page extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/Cafelv1/MultimediaStudio1.png',
+                                  imagePath: 'assets/images/Cafelv1/MultimediaStudio1.png',
                                   description: 'Male Std Lounge',
                                   url: 'https://www.example.com/1',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/Cafelv1/MultimediaStudio2.png',
+                                  imagePath: 'assets/images/Cafelv1/MultimediaStudio2.png',
                                   description: 'Female Std Lounge',
                                   url: 'https://www.example.com/2',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/Cafelv1/OR.png',
+                                  imagePath: 'assets/images/Cafelv1/OR.png',
                                   description: 'Operation Room',
                                   url: 'https://www.example.com/3',
                                 ),
@@ -110,21 +110,21 @@ class PickUrDest1Page extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/Cafelv1/MaleMusolla.png',
+                                  imagePath: 'assets/images/Cafelv1/MaleMusolla.png',
                                   description: 'Male Musolla',
                                   url: 'https://www.example.com/4',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/Cafelv1/Musollafemale.png',
+                                  imagePath: 'assets/images/Cafelv1/Musollafemale.png',
                                   description: 'Female Musolla',
                                   url: 'https://www.example.com/5',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/Cafelv1/HamzahFansuri.png',
+                                  imagePath: 'assets/images/Cafelv1/HamzahFansuri.png',
                                   description: 'Hamzah Fansuri',
                                   url: 'https://www.example.com/6',
                                 ),
@@ -136,14 +136,14 @@ class PickUrDest1Page extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/Cafelv1/Gamesmy.png',
+                                  imagePath: 'assets/images/Cafelv1/Gamesmy.png',
                                   description: 'Gamesmy',
                                   url: 'https://www.example.com/4',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/Cafelv1/CITA.png',
+                                  imagePath: 'assets/images/Cafelv1/CITA.png',
                                   description: 'Centre of IT Advancement',
                                   url: 'https://www.example.com/5',
                                 ),

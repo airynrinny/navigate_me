@@ -17,7 +17,7 @@ class PickUrDest3Page extends StatelessWidget {
           fit: StackFit.expand,
           children: [
             Image.asset(
-              "images/pickDestBG.png",
+              "assets/images/pickDestBG.png",
               fit: BoxFit.cover,
             ),
             // Centered content
@@ -48,7 +48,7 @@ class PickUrDest3Page extends StatelessWidget {
                               const Column(
                                 children: [
                                   Text(
-                                    '3CNavigate Me',
+                                    'Navigate Me',
                                     style: TextStyle(
                                       fontSize: 44,
                                       fontWeight: FontWeight.bold,
@@ -56,7 +56,7 @@ class PickUrDest3Page extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    'Pick Your Destination',
+                                    'Pick Your Destination - Level 3',
                                     style: TextStyle(
                                       fontSize: 22,
                                       fontWeight: FontWeight.bold,
@@ -86,19 +86,19 @@ class PickUrDest3Page extends StatelessWidget {
                               // First row
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/Cafelv3/CyberSecurity.png',
+                                    imagePath: 'assets/images/Cafelv3/CyberSecurity.png',
                                     description: 'Cybersecurity',
                                     url: 'https://www.example.com/1'),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/UIAM.jpg',
+                                    imagePath: 'assets/images/UIAM.jpg',
                                     description: 'TBD',
                                     url: 'https://www.example.com/2'),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/UIAM.jpg',
+                                    imagePath: 'assets/images/UIAM.jpg',
                                     description: 'TBD',
                                     url: 'https://www.example.com/3'),
                               ),

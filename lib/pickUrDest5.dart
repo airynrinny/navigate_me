@@ -17,7 +17,7 @@ class PickUrDest5Page extends StatelessWidget {
           fit: StackFit.expand,
           children: [
             Image.asset(
-              "images/pickDestBG.png",
+              "assets/images/pickDestBG.png",
               fit: BoxFit.cover,
             ),
             Center(
@@ -46,7 +46,7 @@ class PickUrDest5Page extends StatelessWidget {
                               const Column(
                                 children: [
                                   Text(
-                                    '5CNavigate Me',
+                                    'Navigate Me',
                                     style: TextStyle(
                                       fontSize: 44,
                                       fontWeight: FontWeight.bold,
@@ -54,7 +54,7 @@ class PickUrDest5Page extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    'Pick Your Destination',
+                                    'Pick Your Destination - Level 5',
                                     style: TextStyle(
                                       fontSize: 22,
                                       fontWeight: FontWeight.bold,
@@ -82,21 +82,21 @@ class PickUrDest5Page extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/Cafelv5/ConferenceRoom.png',
+                                  imagePath: 'assets/images/Cafelv5/ConferenceRoom.png',
                                   description: 'Conference Room',
                                   url: 'https://www.example.com/1',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/Cafelv5/GO.png',
+                                  imagePath: 'assets/images/Cafelv5/GO.png',
                                   description: 'General Office',
                                   url: 'https://www.example.com/2',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/UIAM.jpg',
+                                  imagePath: 'assets/images/UIAM.jpg',
                                   description: 'TBD',
                                   url: 'https://www.example.com/3',
                                 ),

@@ -17,7 +17,7 @@ class PickUrDest2Page extends StatelessWidget {
           fit: StackFit.expand,
           children: [
             Image.asset(
-              "images/pickDestBG.png",
+              "assets/images/pickDestBG.png",
               fit: BoxFit.cover,
             ),
             // Centered content
@@ -48,7 +48,7 @@ class PickUrDest2Page extends StatelessWidget {
                               const Column(
                                 children: [
                                   Text(
-                                    '2CNavigate Me',
+                                    'Navigate Me',
                                     style: TextStyle(
                                       fontSize: 44,
                                       fontWeight: FontWeight.bold,
@@ -56,7 +56,7 @@ class PickUrDest2Page extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    'Pick Your Destination',
+                                    'Pick Your Destination - Level 2',
                                     style: TextStyle(
                                       fontSize: 22,
                                       fontWeight: FontWeight.bold,
@@ -86,19 +86,19 @@ class PickUrDest2Page extends StatelessWidget {
                               // First row
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/Cafelv2/5MPH.png',
+                                    imagePath: 'assets/images/Cafelv2/5MPH.png',
                                     description: 'MPH',
                                     url: 'https://www.example.com/1'),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/Cafelv2/PGOffice.png',
+                                    imagePath: 'assets/images/Cafelv2/PGOffice.png',
                                     description: 'PG Office',
                                     url: 'https://www.example.com/2'),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/Cafelv2/IIBFLib.png',
+                                    imagePath: 'assets/images/Cafelv2/IIBFLib.png',
                                     description: 'IiBF Library',
                                     url: 'https://www.example.com/3'),
                               ),
@@ -111,13 +111,13 @@ class PickUrDest2Page extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/Cafelv2/IIBF.png',
+                                    imagePath: 'assets/images/Cafelv2/IIBF.png',
                                     description: 'IiBF',
                                     url: 'https://www.example.com/4'),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/Cafelv2/IAT.png',
+                                    imagePath: 'assets/images/Cafelv2/IAT.png',
                                     description: 'IAT',
                                     url: 'https://www.example.com/5'),
                               ),
@@ -186,6 +186,7 @@ class PickUrDest2Page extends StatelessWidget {
                 String searchQuery = _searchController.text;
                 print("Search Button Pressed with query: $searchQuery");
                 // Add your search functionality here
+                _performSearch(context, searchQuery);
                 Navigator.of(context).pop();
               },
               style: ButtonStyle(
@@ -195,6 +196,50 @@ class PickUrDest2Page extends StatelessWidget {
                   const Text('Search', style: TextStyle(color: Colors.white)),
             ),
           ],
+        );
+      },
+    );
+  }
+
+  void _performSearch(BuildContext context, String searchQuery) {
+    // Implement your search logic here
+    // For example, you can filter the destinations based on the search query
+    List<String> destinations = [
+      'MPH',
+      'PG Office',
+      'IiBF Library',
+      'IiBF',
+      'IAT',
+    ];
+
+    List<String> filteredDestinations = destinations
+        .where((destination) =>
+            destination.toLowerCase().contains(searchQuery.toLowerCase()))
+        .toList();
+
+    // Display the filtered destinations
+    _showSearchResultsDialog(context, filteredDestinations);
+  }
+
+  void _showSearchResultsDialog(
+      BuildContext context, List<String> results) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Search Results'),
+          content: Column(
+            children: results
+                .map((result) => ListTile(
+                      title: Text(result),
+                      // Add logic to navigate to the selected destination when tapped
+                      onTap: () {
+                        // Handle the tap, e.g., navigate to the selected destination
+                        Navigator.pop(context);
+                      },
+                    ))
+                .toList(),
+          ),
         );
       },
     );
@@ -265,16 +310,14 @@ class ImageWithDescription extends StatelessWidget {
         ),
       );
     } else if (description == 'PG Office') {
-      
+      // Handle the destination for 'PG Office'
     } else if (description == 'IiBF Library') {
-      
+      // Handle the destination for 'IiBF Library'
     } else if (description == 'IiBF') {
-
+      // Handle the destination for 'IiBF'
     } else if (description == 'IAT') {
-
-    } 
-    // else if (description == 'Description 6') {
-    //   // Handle the destination for the sixth button
-    // }
+      // Handle the destination for 'IAT'
+    }
+    // Add more conditions if needed for other destinations
   }
 }

@@ -91,19 +91,19 @@ class DPickUrDest2Page extends StatelessWidget {
                               // First row
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/destL2/iat.jpg',
+                                    imagePath: 'images/destL2/iat.png',
                                     description: 'IIUM Advancement Technology',
                                     url: 'https://www.example.com/1'),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/destL2/ibf.jpg',
+                                    imagePath: 'images/destL2/ibf.png',
                                     description: 'IIiBF',
                                     url: 'https://www.example.com/2'),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/destL2/ibfl.jpg',
+                                    imagePath: 'images/destL2/ibfl.png',
                                     description: 'IIiBF Library',
                                     url: 'https://www.example.com/3'),
                               ),

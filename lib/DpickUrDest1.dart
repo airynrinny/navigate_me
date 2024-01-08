@@ -88,21 +88,21 @@ class DPickUrDest1Page extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/destL1/gamesmy.jpg',
+                                  imagePath: 'images/destL1/gamesmy.png',
                                   description: 'GamesMy',
                                   url: 'https://www.example.com/3',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/destL1/loungeM.jpg',
+                                  imagePath: 'images/destL1/loungeM.png',
                                   description: 'Male Student Lounge',
                                   url: 'https://www.example.com/1',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/destL1/loungeF.jpg',
+                                  imagePath: 'images/destL1/loungeF.png',
                                   description: 'Female Student Lounge',
                                   url: 'https://www.example.com/2',
                                 ),
@@ -115,21 +115,21 @@ class DPickUrDest1Page extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/destL1/or.jpg',
+                                  imagePath: 'images/destL1/or.png',
                                   description: 'ICTSS Operation Room',
                                   url: 'https://www.example.com/3',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/destL1/cita.jpg',
+                                  imagePath: 'images/destL1/cita.png',
                                   description: 'CITA',
                                   url: 'https://www.example.com/3',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/destL1/hamzah.jpg',
+                                  imagePath: 'images/destL1/hamzah.png',
                                   description: 'Hamzah Famsuri Resource Centre',
                                   url: 'https://www.example.com/3',
                                 ),
@@ -141,21 +141,21 @@ class DPickUrDest1Page extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/destL1/musollaF.jpg',
+                                  imagePath: 'images/destL1/musollaF.png',
                                   description: 'Female Musholla',
                                   url: 'https://www.example.com/3',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/destL1/musollaM.jpg',
+                                  imagePath: 'images/destL1/musollaM.png',
                                   description: 'Male Musholla',
                                   url: 'https://www.example.com/3',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/destL1/cafe.jpg',
+                                  imagePath: 'images/destL1/cafe.png',
                                   description: 'KICT Cafeteria',
                                   url: 'https://www.example.com/3',
                                 ),

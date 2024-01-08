@@ -88,14 +88,14 @@ class DPickUrDest4Page extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/DdestL4/cs.jpg',
+                                  imagePath: 'images/DdestL4/cs.png',
                                   description: 'Department of Computer Science',
                                   url: 'https://www.example.com/1',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/DdestL4/is.jpg',
+                                  imagePath: 'images/DdestL4/is.png',
                                   description:
                                       'Department of Information Systems',
                                   url: 'https://www.example.com/2',
@@ -103,7 +103,7 @@ class DPickUrDest4Page extends StatelessWidget {
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/DdestL4/lis.jpg',
+                                  imagePath: 'images/DdestL4/lis.png',
                                   description:
                                       'Department of Library and Information Science',
                                   url: 'https://www.example.com/3',

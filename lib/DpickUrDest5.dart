@@ -88,14 +88,14 @@ class DPickUrDest5Page extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/DdestL5/cr.jpg',
+                                  imagePath: 'images/DdestL5/cr.png',
                                   description: 'Conference Room',
                                   url: 'https://www.example.com/1',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/DdestL5/go.jpg',
+                                  imagePath: 'images/DdestL5/go.png',
                                   description: 'General Office',
                                   url: 'https://www.example.com/2',
                                 ),

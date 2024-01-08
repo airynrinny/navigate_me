@@ -91,7 +91,7 @@ class DPickUrDest3Page extends StatelessWidget {
                               // First row
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/destL3/cyber.jpg',
+                                    imagePath: 'images/destL3/cyber.png',
                                     description:
                                         'Cyber Security Centre of Excellence',
                                     url: 'https://www.example.com/1'),

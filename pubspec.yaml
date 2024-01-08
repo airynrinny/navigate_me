@@ -78,15 +78,22 @@ flutter:
   # https://flutter.dev/assets-and-images/#from-packages
 
 assets:
-- images/starting_point.png
-- images/cafe.png
 - images/block_d.jpg
+- images/cafe.png
+- images/Homepage.png
+- images/iium_logo.png
+- images/Log_in.png
+- images/naviguideBG.png
+- images/pickDestBG.png
+- images/social_media.png
+- images/starting PointBg.png
+- images/uia logo.png
+- images/UIAM.png
+
 - images/blockd-cafe/1.png
 - images/blockd-cafe/2.png
-- images/blockd-cafe/3.png
 - images/blockd-cafe/4.png
 - images/blockd-cafe/5.png
-- images/blockd-cafe/6.png
 - images/blockd-cafe/7.png
 - images/blockd-cafe/8.png
 - images/blockd-cafe/9.png
@@ -96,6 +103,166 @@ assets:
 - images/blockd-cafe/13.png
 - images/blockd-cafe/14.png
 - images/blockd-cafe/15.png
+
+- images/blockd-cyber/1.png
+- images/blockd-cyber/2.png
+- images/blockd-cyber/3.png
+- images/blockd-cyber/4.png
+- images/blockd-cyber/5.png
+- images/blockd-cyber/6.png
+- images/blockd-cyber/7.png
+- images/blockd-cyber/8.png
+
+- images/blockd-dis/1.png
+- images/blockd-dis/2.png
+- images/blockd-dis/3.png
+- images/blockd-dis/4.png
+- images/blockd-dis/5.png
+- images/blockd-dis/6.png
+- images/blockd-dis/7.png
+- images/blockd-dis/8.png
+- images/blockd-dis/9.png
+- images/blockd-dis/10.png
+- images/blockd-dis/11.png
+- images/blockd-dis/12.png
+
+- images/blockd-games/1.png
+- images/blockd-games/2.png
+- images/blockd-games/3.png
+
+- images/blockd-go/1.png
+- images/blockd-go/2.png
+- images/blockd-go/3.png
+- images/blockd-go/4.png
+- images/blockd-go/5.png
+- images/blockd-go/6.png
+- images/blockd-go/7.png
+- images/blockd-go/8.png
+- images/blockd-go/9.png
+- images/blockd-go/10.png
+- images/blockd-go/11.png
+
+- images/blockd-IIiBFlib/1.png
+- images/blockd-IIiBFlib/2.png
+- images/blockd-IIiBFlib/3.png
+- images/blockd-IIiBFlib/4.png
+- images/blockd-IIiBFlib/5.png
+
+- images/Cafelv1/1SLF.png
+- images/Cafelv1/2SLF.png
+- images/Cafelv1/3SLF.png
+- images/Cafelv1/4SLF.png
+- images/Cafelv1/5SLF.png
+- images/Cafelv1/6SLF.png
+- images/Cafelv1/7SLF.png
+- images/Cafelv1/8SLF.png
+- images/Cafelv1/9SLF.png
+- images/Cafelv1/10SLF.png
+- images/Cafelv1/11SLF.png
+- images/Cafelv1/12SLF.png
+- images/Cafelv1/13SLF.png
+- images/Cafelv1/CITA.png
+- images/Cafelv1/GamesMy.png
+- images/Cafelv1/HamzahFansuri.png
+- images/Cafelv1/MaleMusolla.png
+- images/Cafelv1/MultimediaStudio1.png
+- images/Cafelv1/MultimediaStudio2.png
+- images/Cafelv1/MusollaFemale.png
+- images/Cafelv1/OR.png
+
+- images/Cafelv2/1MPH.png
+- images/Cafelv2/2MPH.png
+- images/Cafelv2/3MPH.png
+- images/Cafelv2/4MPH.png
+- images/Cafelv2/5MPH.png
+- images/Cafelv2/IAT.png
+- images/Cafelv2/IIBF.png
+- images/Cafelv2/IIBFLib.png
+- images/Cafelv2/PGOffice.png
+
+- images/Cafelv3/1.png
+- images/Cafelv3/2.png
+- images/Cafelv3/3.png
+- images/Cafelv3/4.png
+- images/Cafelv3/5.png
+- images/Cafelv3/6.png
+- images/Cafelv3/7.png
+- images/Cafelv3/8.png
+- images/Cafelv3/9.png
+- images/Cafelv3/10.png
+- images/Cafelv3/CyberSecurity.png
+
+- images/Cafelv4/1DCS.png
+- images/Cafelv4/2DCS.png
+- images/Cafelv4/3DCS.png
+- images/Cafelv4/4DCS.png
+- images/Cafelv4/5DCS.png
+- images/Cafelv4/6DCS.png
+- images/Cafelv4/7DCS.png
+- images/Cafelv4/8DCS.png
+- images/Cafelv4/9DCS.png
+- images/Cafelv4/10DCS.png
+- images/Cafelv4/11DCS.png
+- images/Cafelv4/12DCS.png
+- images/Cafelv4/DIS.png
+- images/Cafelv4/DLIS.png
+
+- images/Cafelv5/1CR.png
+- images/Cafelv5/2CR.png
+- images/Cafelv5/3CR.png
+- images/Cafelv5/4CR.png
+- images/Cafelv5/5CR.png
+- images/Cafelv5/6CR.png
+- images/Cafelv5/7CR.png
+- images/Cafelv5/8CR.png
+- images/Cafelv5/ConferenceRoom.png
+- images/Cafelv5/GO.png
+
+- images/DdestL4/cs.png
+- images/DdestL4/is.png
+- images/DdestL4/lis.png
+
+- images/DdestL5/cr.png
+- images/DdestL5/go.png
+
+- images/destL1/cafe.png
+- images/destL1/cita.png
+- images/destL1/gamesmy.png
+- images/destL1/hamzah.png
+- images/destL1/loungeF.png
+- images/destL1/loungeM.png
+- images/destL1/musollaF.png
+- images/destL1/musollaM.png
+- images/destL1/or.png
+
+- images/destL2/iat.png
+- images/destL2/ibf.png
+- images/destL2/ibfl.png
+- images/destL2/mph.png
+- images/destL2/pg.png
+
+- images/destL3/cyber.png
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a

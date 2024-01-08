@@ -232,7 +232,7 @@ class ImageWithDescription extends StatelessWidget {
 
   void _handleFindButtonPress(BuildContext context) {
     // Modify the logic based on your requirements
-    if (description == 'Description 1') {
+    if (description == 'Cyber Security Centre of Excellence') {
       Navigator.push(
         context,
         MaterialPageRoute(

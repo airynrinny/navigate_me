@@ -245,15 +245,16 @@ class ImageWithDescription extends StatelessWidget {
 
   void _handleFindButtonPress(BuildContext context) {
     // Modify the logic based on your requirements
-    if (description == 'Description 1') {
-    } else if (description == 'Description 2') {
+    if (description == 'Department of Computer Science') {
+    } else if (description == 'Department of Information Systems') {
       Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) => NaviGuideD_DISPage(),
         ),
       );
-    } else if (description == 'Description 3') {}
+    } else if (description ==
+        'Department of Library and Information Science') {}
     // else if (description == 'Description 4') {
     //   // Handle the destination for the fourth button
     // }

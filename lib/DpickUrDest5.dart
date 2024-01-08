@@ -243,8 +243,8 @@ class ImageWithDescription extends StatelessWidget {
 
   void _handleFindButtonPress(BuildContext context) {
     // Modify the logic based on your requirements
-    if (description == 'Description 1') {
-    } else if (description == 'Description 2') {
+    if (description == 'Conference Room') {
+    } else if (description == 'General Office') {
       Navigator.push(
         context,
         MaterialPageRoute(

@@ -296,23 +296,25 @@ class ImageWithDescription extends StatelessWidget {
 
   void _handleFindButtonPress(BuildContext context) {
     // Modify the logic based on your requirements
-    if (description == 'Description 1') {
-    } else if (description == 'Description 2') {
+    if (description == 'GamesMy') {
+    } else if (description == 'Male Student Lounge') {
       // Handle the destination for the second button
-    } else if (description == 'Description 3') {
+    } else if (description == 'Female Student Lounge') {
       Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) => NaviGuideD_GamesMyPage(),
         ),
       );
-    } else if (description == 'Description 4') {
+    } else if (description == 'ICTSS Operating Room') {
       // Handle the destination for the fourth button
-    } else if (description == 'Description 5') {
+    } else if (description == 'CITA') {
       // Handle the destination for the fifth button
-    } else if (description == 'Description 6') {
+    } else if (description == 'Female Musolla') {
       // Handle the destination for the sixth button
-    } else if (description == 'Description 7') {
+    } else if (description == 'Male Musolla') {
+      // Handle the destination for the sixth button
+    } else if (description == 'KICT Cafeteria') {
       // Handle the destination for the sixth button
     }
   }

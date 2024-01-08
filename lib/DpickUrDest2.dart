@@ -263,18 +263,19 @@ class ImageWithDescription extends StatelessWidget {
 
   void _handleFindButtonPress(BuildContext context) {
     // Modify the logic based on your requirements
-    if (description == 'Description 1') {
-    } else if (description == 'Description 2') {
-    } else if (description == 'Description 3') {
+    if (description == 'IIUM Advancement Technology') {
+    } else if (description == 'IIiBF') {
+    } else if (description == 'IIiBF Library') {
       Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) => NaviGuideD_IiBFlibPage(),
         ),
       );
-    } else if (description == 'Description 4') {
+    } else if (description == 'KICT Multipurpose Hall') {
       // Handle the destination for the fourth button
-    } else if (description == 'Description 5') {
+    } else if (description ==
+        'Office of Deputy Dean (Postgraduate & Research)') {
       // Handle the destination for the fifth button
     }
     // else if (description == 'Description 6') {

@@ -32,72 +32,24 @@ class NaviGuideCafe_DCSPage extends StatelessWidget {
                         style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 40.0),
-                      ListTile(
-                        leading: Image.asset('images/Cafelv4/1DCS.png'),
-                        title: const Text('STEP 1: KICT Cafeteria'),
-                        subtitle: const Text('Start at cafe'),
-                      ),
-                      ListTile(
-                      leading: Image.asset('images/Cafelv4/2DCS.png'), // Replace 'step2.jpg' with your actual image path
-                      title: const Text('STEP 2: Junction'),
-                      subtitle: const Text('To the left'),
-                    ),
-                     ListTile(
-                      leading: Image.asset('images/Cafelv4/3DCS.png'), // Replace 'step3.jpg' with your actual image path
-                      title: const Text('STEP 3: Musolla on the left'),
-                      subtitle: const Text('Go straight to left'),
-                    ),
-                     ListTile(
-                      leading: Image.asset('images/Cafelv4/4DCS.png'), // Replace 'step4.jpg' with your actual image path
-                      title: const Text('STEP 4: Pass musolla on the left'),
-                      subtitle: const Text('Go straight'),
-                    ),
-                     ListTile(
-                      leading: Image.asset('images/Cafelv4/5DCS.png'), // Replace 'step5.jpg' with your actual image path
-                      title: const Text('STEP 5: Glass door, TV, lift'),
-                      subtitle: const Text('Go straight to the lift'),
-                    ),
-                    ListTile(
-                      leading: Image.asset('images/Cafelv4/6DCS.png'), // Replace 'step5.jpg' with your actual image path
-                      title: const Text('STEP 6: Lift on the left'),
-                      subtitle: const Text('Go to lift on the left, go to level 4'),
-                    ),
-                    ListTile(
-                      leading: Image.asset('images/Cafelv4/7DCS.png'), // Replace 'step5.jpg' with your actual image path
-                      title: const Text('STEP 7: Level 4'),
-                      subtitle: const Text('Go straight'),
-                    ),
-                    ListTile(
-                      leading: Image.asset('images/Cafelv4/8DCS.png'), // Replace 'step5.jpg' with your actual image path
-                      title: const Text('STEP 8: Hallway'),
-                      subtitle: const Text('Go straight'),
-                    ),
-                    ListTile(
-                      leading: Image.asset('images/Cafelv4/9DCS.png'), // Replace 'step5.jpg' with your actual image path
-                      title: const Text('STEP 9: Pass the DIS'),
-                      subtitle: const Text('Go straight, turn slight left'),
-                    ),
-                    ListTile(
-                      leading: Image.asset('images/Cafelv4/10DCS.png'), // Replace 'step5.jpg' with your actual image path
-                      title: const Text('STEP 10: Research unit 10'),
-                      subtitle: const Text('Go straight until research unit 10'),
-                    ),
-                    ListTile(
-                      leading: Image.asset('images/Cafelv4/11DCS.png'), // Replace 'step5.jpg' with your actual image path
-                      title: const Text('STEP 11: Straight until blue bin'),
-                      subtitle: const Text('Go straight, see Research unit 10 on the left'),
-                    ),
-                    ListTile(
-                      leading: Image.asset('images/Cafelv4/12DCS.png'), // Replace 'step5.jpg' with your actual image path
-                      title: const Text('STEP 12: You have arrived!'),
-                      subtitle: const Text('Department of Computer Science'),
-                    ),
-                    // ListTile(
-                    //     title: const Text('JUMP TO STEP'),
-                    //     onTap: () {
-                    //       // navigate to desired step
-                    //     },
-                    //   ),
+                      _buildStep('assets/images/Cafelv4/1DCS.png', 'STEP 1: KICT Cafeteria', 'Start at cafe'),
+                      _buildStep('assets/images/Cafelv4/2DCS.png', 'STEP 2: Junction', 'To the left'),
+                      _buildStep('assets/images/Cafelv4/3DCS.png', 'STEP 3: Musolla on the left', 'Go straight to left'),
+                      _buildStep('assets/images/Cafelv4/4DCS.png', 'STEP 4: Pass musolla on the left', 'Go straight'),
+                      _buildStep('assets/images/Cafelv4/5DCS.png', 'STEP 5: Glass door, TV, lift', 'Go straight to the lift'),
+                      _buildStep('assets/images/Cafelv4/6DCS.png', 'STEP 6: Lift on the left', 'Go to lift on the left, go to level 4'),
+                      _buildStep('assets/images/Cafelv4/7DCS.png', 'STEP 7: Level 4', 'Go straight'),
+                      _buildStep('assets/images/Cafelv4/8DCS.png', 'STEP 8: Hallway', 'Go straight'),
+                      _buildStep('assets/images/Cafelv4/9DCS.png', 'STEP 9: Pass the DIS', 'Go straight, turn slight left'),
+                      _buildStep('assets/images/Cafelv4/10DCS.png', 'STEP 10: Research unit 10', 'Go straight until research unit 10'),
+                      _buildStep('assets/images/Cafelv4/11DCS.png', 'STEP 11: Straight until blue bin', 'Go straight, see Research unit 10 on the left'),
+                      _buildStep('assets/images/Cafelv4/12DCS.png', 'STEP 12: You have arrived!', 'Department of Computer Science'),
+                      // ListTile(
+                      //     title: const Text('JUMP TO STEP'),
+                      //     onTap: () {
+                      //       // navigate to desired step
+                      //     },
+                      //   ),
                     ],
                   ),
                 ],
@@ -105,6 +57,38 @@ class NaviGuideCafe_DCSPage extends StatelessWidget {
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _buildStep(String imagePath, String title, String subtitle) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Image.asset(
+            imagePath,
+            width: 150,  // Adjust the width as needed
+            height: 150, // Adjust the height as needed
+          ),
+          const SizedBox(width: 16.0),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                ),
+                Text(
+                  subtitle,
+                  style: const TextStyle(fontFamily: 'Times New Roman', fontSize: 16),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

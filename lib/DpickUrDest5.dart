@@ -17,7 +17,7 @@ class DPickUrDest5Page extends StatelessWidget {
           fit: StackFit.expand,
           children: [
             Image.asset(
-              "images/pickDestBG.png",
+              "assets/images/pickDestBG.png",
               fit: BoxFit.cover,
             ),
             Center(
@@ -88,21 +88,21 @@ class DPickUrDest5Page extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/DdestL5/cr.png',
+                                  imagePath: 'assets/images/DdestL5/cr.png',
                                   description: 'Conference Room',
                                   url: 'https://www.example.com/1',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/DdestL5/go.png',
+                                  imagePath: 'assets/images/DdestL5/go.png',
                                   description: 'General Office',
                                   url: 'https://www.example.com/2',
                                 ),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                  imagePath: 'images/UIAM.jpg',
+                                  imagePath: 'assets/images/UIAM.jpg',
                                   description: 'TBD',
                                   url: 'https://www.example.com/3',
                                 ),

@@ -17,7 +17,7 @@ class DPickUrDest3Page extends StatelessWidget {
           fit: StackFit.expand,
           children: [
             Image.asset(
-              "images/pickDestBG.png",
+              "assets/images/pickDestBG.png",
               fit: BoxFit.cover,
             ),
             // Centered content
@@ -91,7 +91,7 @@ class DPickUrDest3Page extends StatelessWidget {
                               // First row
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/destL3/cyber.png',
+                                    imagePath: 'assets/images/destL3/cyber.png',
                                     description:
                                         'Cyber Security Centre of Excellence',
                                     url: 'https://www.example.com/1'),

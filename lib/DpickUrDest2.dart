@@ -17,7 +17,7 @@ class DPickUrDest2Page extends StatelessWidget {
           fit: StackFit.expand,
           children: [
             Image.asset(
-              "images/pickDestBG.png",
+              "assets/images/pickDestBG.png",
               fit: BoxFit.cover,
             ),
             // Centered content
@@ -91,19 +91,19 @@ class DPickUrDest2Page extends StatelessWidget {
                               // First row
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/destL2/iat.png',
+                                    imagePath: 'assets/images/destL2/iat.png',
                                     description: 'IIUM Advancement Technology',
                                     url: 'https://www.example.com/1'),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/destL2/ibf.png',
+                                    imagePath: 'assets/images/destL2/ibf.png',
                                     description: 'IIiBF',
                                     url: 'https://www.example.com/2'),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/destL2/ibfl.png',
+                                    imagePath: 'assets/images/destL2/ibfl.png',
                                     description: 'IIiBF Library',
                                     url: 'https://www.example.com/3'),
                               ),
@@ -116,13 +116,13 @@ class DPickUrDest2Page extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/destL2/mph.png',
+                                    imagePath: 'assets/images/destL2/mph.png',
                                     description: 'KICT Multipurpose Hall',
                                     url: 'https://www.example.com/4'),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'images/destL2/pg.png',
+                                    imagePath: 'assets/images/destL2/pg.png',
                                     description:
                                         'Office of Deputy Dean (Postgraduate & Research)',
                                     url: 'https://www.example.com/5'),

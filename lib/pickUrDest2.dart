@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fyp_project/naviGuideCafe_MPH.dart';
+import 'naviGuideCafe_MPH.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'pickUrDest1.dart';
 import 'pickUrDest3.dart';
@@ -71,11 +71,16 @@ class PickUrDest2Page extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              _buildCircularButton(context, '1', PickUrDest1Page()),
-                              _buildCircularButton(context, '2', PickUrDest2Page()),
-                              _buildCircularButton(context, '3', PickUrDest3Page()),
-                              _buildCircularButton(context, '4', PickUrDest4Page()),
-                              _buildCircularButton(context, '5', PickUrDest5Page()),
+                              _buildCircularButton(
+                                  context, '1', PickUrDest1Page()),
+                              _buildCircularButton(
+                                  context, '2', PickUrDest2Page()),
+                              _buildCircularButton(
+                                  context, '3', PickUrDest3Page()),
+                              _buildCircularButton(
+                                  context, '4', PickUrDest4Page()),
+                              _buildCircularButton(
+                                  context, '5', PickUrDest5Page()),
                             ],
                           ),
                           const SizedBox(height: 20.0),
@@ -92,13 +97,15 @@ class PickUrDest2Page extends StatelessWidget {
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'assets/images/Cafelv2/PGOffice.png',
+                                    imagePath:
+                                        'assets/images/Cafelv2/PGOffice.png',
                                     description: 'PG Office',
                                     url: 'https://www.example.com/2'),
                               ),
                               Expanded(
                                 child: ImageWithDescription(
-                                    imagePath: 'assets/images/Cafelv2/IIBFLib.png',
+                                    imagePath:
+                                        'assets/images/Cafelv2/IIBFLib.png',
                                     description: 'IiBF Library',
                                     url: 'https://www.example.com/3'),
                               ),
@@ -221,8 +228,7 @@ class PickUrDest2Page extends StatelessWidget {
     _showSearchResultsDialog(context, filteredDestinations);
   }
 
-  void _showSearchResultsDialog(
-      BuildContext context, List<String> results) {
+  void _showSearchResultsDialog(BuildContext context, List<String> results) {
     showDialog(
       context: context,
       builder: (BuildContext context) {

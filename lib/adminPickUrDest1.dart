@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 
 class ImageData {
-  final String imagePath;
-  final String description;
-  final String url;
+  String imagePath;
+  String description;
+  String url;
 
-  ImageData({required this.imagePath, required this.description, required this.url});
+  ImageData({
+    required this.imagePath,
+    required this.description,
+    required this.url,
+  });
 }
 
 class AdminPickUrDest1Page extends StatefulWidget {
@@ -16,11 +20,31 @@ class AdminPickUrDest1Page extends StatefulWidget {
 class _AdminPickUrDest1PageState extends State<AdminPickUrDest1Page> {
   final TextEditingController _searchController = TextEditingController();
   final List<ImageData> images = [
-    ImageData(imagePath: 'images/UIAM.jpg', description: 'Description 1', url: 'https://www.example.com/1'),
-    ImageData(imagePath: 'images/UIAM.jpg', description: 'Description 2', url: 'https://www.example.com/2'),
-    ImageData(imagePath: 'images/UIAM.jpg', description: 'Description 3', url: 'https://www.example.com/3'),
-    ImageData(imagePath: 'images/iium_logo.png', description: 'Description 4', url: 'https://www.example.com/4'),
-    ImageData(imagePath: 'images/iium_logo.png', description: 'Description 5', url: 'https://www.example.com/5'),
+    ImageData(
+      imagePath: 'assets/images/UIAM.jpg',
+      description: 'Description 1',
+      url: 'https://www.example.com/1',
+    ),
+    ImageData(
+      imagePath: 'assets/images/UIAM.jpg',
+      description: 'Description 2',
+      url: 'https://www.example.com/2',
+    ),
+    ImageData(
+      imagePath: 'assets/images/UIAM.jpg',
+      description: 'Description 3',
+      url: 'https://www.example.com/3',
+    ),
+    ImageData(
+      imagePath: 'assets/images/iium_logo.png',
+      description: 'Description 4',
+      url: 'https://www.example.com/4',
+    ),
+    ImageData(
+      imagePath: 'assets/images/iium_logo.png',
+      description: 'Description 5',
+      url: 'https://www.example.com/5',
+    ),
   ];
 
   @override
@@ -30,7 +54,7 @@ class _AdminPickUrDest1PageState extends State<AdminPickUrDest1Page> {
         fit: StackFit.expand,
         children: [
           Image.asset(
-            "images/pickDestBG.png",
+            "assets/images/pickDestBG.png",
             fit: BoxFit.cover,
           ),
           // Centered content
@@ -83,8 +107,7 @@ class _AdminPickUrDest1PageState extends State<AdminPickUrDest1Page> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            for (int i = 0; i < images.length; i++)
-                              _buildCircularButton(context, (i + 1).toString(), images[i]),
+                            _buildImageButtons(context),
                           ],
                         ),
                         const SizedBox(height: 20.0),
@@ -94,7 +117,11 @@ class _AdminPickUrDest1PageState extends State<AdminPickUrDest1Page> {
                           children: [
                             for (int i = 0; i < images.length; i++)
                               Expanded(
-                                child: ImageWithDescription(imageData: images[i], isAdmin: true),
+                                child: ImageWithDescription(
+                                  imageData: images[i],
+                                  isAdmin: true,
+                                  onTap: () => _showImageEditingInterface(context, images[i]),
+                                ),
                               ),
                           ],
                         ),
@@ -110,28 +137,40 @@ class _AdminPickUrDest1PageState extends State<AdminPickUrDest1Page> {
     );
   }
 
-  Widget _buildCircularButton(BuildContext context, String label, ImageData imageData) {
-    return CircleAvatar(
-      radius: 20, // Adjust the radius as needed
-      backgroundColor: Colors.white,
-      child: ElevatedButton(
-        onPressed: () {
-          print("Button Pressed for $label");
-          _showEditingInterface(context, imageData);
-        },
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.transparent),
-        ),
-        child: Text(
-          label,
-          style: const TextStyle(color: Colors.black),
-        ),
+  Widget _buildImageButtons(BuildContext context) {
+    return Column(
+      children: images.map((imageData) {
+        return _buildEditableImage(context, imageData);
+      }).toList(),
+    );
+  }
+
+  Widget _buildEditableImage(BuildContext context, ImageData imageData) {
+    return GestureDetector(
+      onTap: () => _showImageEditingInterface(context, imageData),
+      child: Column(
+        children: [
+          Image.asset(
+            imageData.imagePath,
+            width: 100,
+            height: 100,
+            fit: BoxFit.cover,
+          ),
+          const SizedBox(height: 8.0),
+          Text(
+            imageData.description,
+            style: const TextStyle(
+              fontSize: 14,
+              color: Colors.black,
+            ),
+          ),
+        ],
       ),
     );
   }
 
-  Future<void> _showSearchDialog(BuildContext context) async {
-    return showDialog(
+  void _showSearchDialog(BuildContext context) {
+    showDialog(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
@@ -167,11 +206,15 @@ class _AdminPickUrDest1PageState extends State<AdminPickUrDest1Page> {
     );
   }
 
-  void _showEditingInterface(BuildContext context, ImageData imageData) {
-    // Implement your editing interface here
+  void _showImageEditingInterface(BuildContext context, ImageData imageData) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
+        TextEditingController descriptionController =
+            TextEditingController(text: imageData.description);
+        TextEditingController urlController =
+            TextEditingController(text: imageData.url);
+
         return AlertDialog(
           title: const Text('Editing Interface'),
           content: Column(
@@ -183,21 +226,29 @@ class _AdminPickUrDest1PageState extends State<AdminPickUrDest1Page> {
                 fit: BoxFit.cover,
               ),
               const SizedBox(height: 8.0),
-              Text(
-                imageData.description,
-                style: const TextStyle(
-                  fontSize: 14,
-                  color: Colors.black,
+              TextField(
+                controller: descriptionController,
+                decoration: const InputDecoration(
+                  labelText: 'Description',
                 ),
               ),
               const SizedBox(height: 8.0),
-              // Add your editing widgets here
+              TextField(
+                controller: urlController,
+                decoration: const InputDecoration(
+                  labelText: 'URL',
+                ),
+              ),
             ],
           ),
           actions: [
             ElevatedButton(
               onPressed: () {
-                // Implement save or update logic here
+                _saveImageChanges(
+                  imageData,
+                  descriptionController.text,
+                  urlController.text,
+                );
                 Navigator.of(context).pop(); // Close the editing interface
               },
               style: ButtonStyle(
@@ -219,63 +270,54 @@ class _AdminPickUrDest1PageState extends State<AdminPickUrDest1Page> {
       },
     );
   }
+
+  void _saveImageChanges(
+    ImageData imageData,
+    String newDescription,
+    String newUrl,
+  ) {
+    setState(() {
+      // Update the image data with the new values
+      imageData.description = newDescription;
+      imageData.url = newUrl;
+    });
+    // Optionally, you can save the updated data to a database or any other storage mechanism.
+  }
 }
 
 class ImageWithDescription extends StatelessWidget {
   final ImageData imageData;
   final bool isAdmin;
+  final VoidCallback onTap;
 
-  const ImageWithDescription({required this.imageData, required this.isAdmin});
+  const ImageWithDescription({
+    required this.imageData,
+    required this.isAdmin,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Image.asset(
-          imageData.imagePath,
-          width: 100,
-          height: 100,
-          fit: BoxFit.cover,
-        ),
-        const SizedBox(height: 8.0),
-        GestureDetector(
-          onTap: () {
-            _launchURL(imageData.url); // Add the URL you want to open
-          },
-          child: Text(
+    return GestureDetector(
+      onTap: onTap,
+      child: Column(
+        children: [
+          Image.asset(
+            imageData.imagePath,
+            width: 100,
+            height: 100,
+            fit: BoxFit.cover,
+          ),
+          const SizedBox(height: 8.0),
+          Text(
             imageData.description,
             style: const TextStyle(
               fontSize: 14,
-              color: Colors.black, // Set the color to indicate it's a link
-              decoration: TextDecoration.underline,
+              color: Colors.black,
             ),
           ),
-        ),
-        const SizedBox(height: 8.0),
-        ElevatedButton(
-          onPressed: () {
-            print("Find Button Pressed for ${imageData.description}");
-            if (isAdmin) {
-              // Handle the admin edit functionality here directly
-              _showEditingInterface(context, imageData);
-            } else {
-              // Handle the regular user functionality here
-              // You can navigate to a different page or perform other actions
-            }
-          },
-          style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(Colors.white),
-          ),
-          child: const Text('Find', style: TextStyle(color: Colors.black)),
-        ),
-      ],
+        ],
+      ),
     );
   }
-
-  void _launchURL(String url) async {
-    // Implementation of URL launching
-  }
-}
-
-void _showEditingInterface(BuildContext context, ImageData imageData) {
 }

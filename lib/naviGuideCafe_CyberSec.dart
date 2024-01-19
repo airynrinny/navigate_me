@@ -29,7 +29,11 @@ class NaviGuideCafe_CyberSecPage extends StatelessWidget {
                       ),
                       const Text(
                         'Starting point: Cafe',
-                        style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                      ),
+                      const Text(
+                        'Starting point: CyberSecurity',
+                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 40.0),
                       _buildStep('assets/images/Cafelv3/1.png', 'STEP 1: KICT Cafeteria', 'Start at the Cafe'),

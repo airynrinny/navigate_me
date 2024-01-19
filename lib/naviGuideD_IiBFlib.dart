@@ -35,34 +35,34 @@ class NaviGuideD_IiBFlibPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 40.0),
                       ListTile(
-                        leading: Image.asset('images/blockd-IIiBFlib/1.png'),
+                        leading: Image.asset('assets/images/blockd-IIiBFlib/1.png'),
                         title: const Text(
                             'STEP 1: Take the elevator and go to Level 2'),
                         subtitle: const Text('explanation to go from here'),
                       ),
                       ListTile(
                         leading: Image.asset(
-                            'images/blockd-IIiBFlib/2.png'), // Replace 'step2.jpg' with your actual image path
+                            'assets/images/blockd-IIiBFlib/2.png'), // Replace 'step2.jpg' with your actual image path
                         title: const Text('STEP 2: Turn right'),
                         subtitle: const Text('explanation to go from here'),
                       ),
                       ListTile(
                         leading: Image.asset(
-                            'images/blockd-IIiBFlib/3.png'), // Replace 'step3.jpg' with your actual image path
+                            'assets/images/blockd-IIiBFlib/3.png'), // Replace 'step3.jpg' with your actual image path
                         title: const Text(
                             'STEP 3: Go straight until you see fake plant'),
                         subtitle: const Text('explanation to go from here'),
                       ),
                       ListTile(
                         leading: Image.asset(
-                            'images/blockd-IIiBFlib/4.png'), // Replace 'step4.jpg' with your actual image path
+                            'assets/images/blockd-IIiBFlib/4.png'), // Replace 'step4.jpg' with your actual image path
                         title: const Text(
                             'STEP 4: Turn to the room on your right after reaching the fake plant'),
                         subtitle: const Text('explanation to go from here'),
                       ),
                       ListTile(
                         leading: Image.asset(
-                            'images/blockd-IIiBFlib/5.png'), // Replace 'step4.jpg' with your actual image path
+                            'assets/images/blockd-IIiBFlib/5.png'), // Replace 'step4.jpg' with your actual image path
                         title: const Text('You have arrived!'),
                         subtitle: const Text('explanation to go from here'),
                       ),

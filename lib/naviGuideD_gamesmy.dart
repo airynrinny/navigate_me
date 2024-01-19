@@ -35,20 +35,20 @@ class NaviGuideD_GamesMyPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 40.0),
                       ListTile(
-                        leading: Image.asset('images/blockd-games/1.png'),
+                        leading: Image.asset('assets/images/blockd-games/1.png'),
                         title: const Text('STEP 1: Go straight and turn right'),
                         subtitle: const Text('explanation to go from here'),
                       ),
                       ListTile(
                         leading: Image.asset(
-                            'images/blockd-games/2.png'), // Replace 'step2.jpg' with your actual image path
+                            'assets/images/blockd-games/2.png'), // Replace 'step2.jpg' with your actual image path
                         title: const Text(
                             'STEP 2: You will see a black door on your right'),
                         subtitle: const Text('explanation to go from here'),
                       ),
                       ListTile(
                         leading: Image.asset(
-                            'images/blockd-games/3.png'), // Replace 'step3.jpg' with your actual image path
+                            'assets/images/blockd-games/3.png'), // Replace 'step3.jpg' with your actual image path
                         title: const Text('You have arrived!'),
                         subtitle: const Text('explanation to go from here'),
                       ),

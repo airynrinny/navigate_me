@@ -29,7 +29,11 @@ class NaviGuideCafe_ConfRoomPage extends StatelessWidget {
                       ),
                       const Text(
                         'Starting point: Cafe',
-                        style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                      ),
+                      const Text(
+                        'Destination: Conference Room',
+                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 40.0),
                       _buildStep('assets/images/Cafelv5/1CR.png', 'STEP 1: KICT Cafeteria', 'Go straight until you see the junction'),

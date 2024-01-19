@@ -35,20 +35,20 @@ class NaviGuideD_GOPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 40.0),
                       ListTile(
-                        leading: Image.asset('images/blockd-go/1.png'),
+                        leading: Image.asset('assets/images/blockd-go/1.png'),
                         title: const Text(
                             'STEP 1: Take the elevator and go to Level 5'),
                         subtitle: const Text('explanation to go from here'),
                       ),
                       ListTile(
                         leading: Image.asset(
-                            'images/blockd-go/2.png'), // Replace 'step2.jpg' with your actual image path
+                            'assets/images/blockd-go/2.png'), // Replace 'step2.jpg' with your actual image path
                         title: const Text('STEP 2: Turn right'),
                         subtitle: const Text('explanation to go from here'),
                       ),
                       ListTile(
                         leading: Image.asset(
-                            'images/blockd-go/3.png'), // Replace 'step3.jpg' with your actual image path
+                            'assets/images/blockd-go/3.png'), // Replace 'step3.jpg' with your actual image path
                         title: const Text(
                             'STEP 3: Go straight until you reach the corner'),
                         subtitle: const Text('explanation to go from here'),
@@ -56,51 +56,51 @@ class NaviGuideD_GOPage extends StatelessWidget {
 
                       ListTile(
                         leading: Image.asset(
-                            'images/blockd-go/4.png'), // Replace 'step4.jpg' with your actual image path
+                            'assets/images/blockd-go/4.png'), // Replace 'step4.jpg' with your actual image path
                         title: const Text('STEP 4: Turn right'),
                         subtitle: const Text('explanation to go from here'),
                       ),
                       ListTile(
                         leading: Image.asset(
-                            'images/blockd-go/5.png'), // Replace 'step4.jpg' with your actual image path
+                            'assets/images/blockd-go/5.png'), // Replace 'step4.jpg' with your actual image path
                         title: const Text(
                             'STEP 5: Go into the room and turn left'),
                         subtitle: const Text('explanation to go from here'),
                       ),
                       ListTile(
                         leading: Image.asset(
-                            'images/blockd-go/6.png'), // Replace 'step4.jpg' with your actual image path
+                            'assets/images/blockd-go/6.png'), // Replace 'step4.jpg' with your actual image path
                         title: const Text('STEP 6: Go straight along the path'),
                         subtitle: const Text('explanation to go from here'),
                       ),
                       ListTile(
                         leading: Image.asset(
-                            'images/blockd-go/7.png'), // Replace 'step4.jpg' with your actual image path
+                            'assets/images/blockd-go/7.png'), // Replace 'step4.jpg' with your actual image path
                         title: const Text('STEP 7: Go straight and turn left'),
                         subtitle: const Text('explanation to go from here'),
                       ),
                       ListTile(
                         leading: Image.asset(
-                            'images/blockd-go/8.png'), // Replace 'step4.jpg' with your actual image path
+                            'assets/images/blockd-go/8.png'), // Replace 'step4.jpg' with your actual image path
                         title: const Text('STEP 8: Go straight and turn left'),
                         subtitle: const Text('explanation to go from here'),
                       ),
                       ListTile(
                         leading: Image.asset(
-                            'images/blockd-go/9.png'), // Replace 'step4.jpg' with your actual image path
+                            'assets/images/blockd-go/9.png'), // Replace 'step4.jpg' with your actual image path
                         title: const Text('STEP 9: Go straight'),
                         subtitle: const Text('explanation to go from here'),
                       ),
                       ListTile(
                         leading: Image.asset(
-                            'images/blockd-go/10.png'), // Replace 'step4.jpg' with your actual image path
+                            'assets/images/blockd-go/10.png'), // Replace 'step4.jpg' with your actual image path
                         title: const Text(
                             'STEP 10: Go straight to the glass door'),
                         subtitle: const Text('explanation to go from here'),
                       ),
                       ListTile(
                         leading: Image.asset(
-                            'images/blockd-go/11.png'), // Replace 'step4.jpg' with your actual image path
+                            'assets/images/blockd-go/11.png'), // Replace 'step4.jpg' with your actual image path
                         title: const Text('You have arrived!'),
                         subtitle: const Text('explanation to go from here'),
                       ),

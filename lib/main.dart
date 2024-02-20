@@ -1,24 +1,11 @@
 import 'package:flutter/material.dart';
-// import 'pickUrDest1.dart';
-import 'adminHome.dart';
-import 'startingPoint.dart';
+//import 'package:navigate_me/Admin/adminHome.dart';
+import 'package:navigate_me/User/startingPoint.dart';
 // import 'package:firebase_core/firebase_core.dart';
 
 void main() {
   runApp(MyApp());
 }
-
-// void main() async {
-//   WidgetsFlutterBinding.ensureInitialized();
-//   await Firebase.initializeApp();
-//   runApp(MyApp());
-// }
-
-// void main() async {
-//   WidgetsFlutterBinding.ensureInitialized();
-//   await Firebase.initializeApp();
-//   runApp(MyApp());
-// }
 
 class MyApp extends StatelessWidget {
   @override
@@ -38,7 +25,7 @@ class MyHomePage extends StatelessWidget {
           fit: StackFit.expand,
           children: [
             Image.asset(
-              "assets/images/Homepage.png",
+              "lib/Images/Homepage.png",
               fit: BoxFit.cover,
             ),
             Center(
@@ -56,7 +43,7 @@ class MyHomePage extends StatelessWidget {
                   ),
                   const SizedBox(height: 16.0),
                   Image.asset(
-                    'assets/images/iium_logo.png',
+                    'lib/Images/iium_logo.png',
                     width: 100,
                     height: 100,
                   ),
@@ -89,6 +76,7 @@ class MyHomePage extends StatelessWidget {
                     child: const Text('Start Searching',
                         style: TextStyle(color: Colors.black)),
                   ),
+                  /*
                   const SizedBox(height: 16.0),
                   const Text(
                     'Admin: ',
@@ -110,7 +98,7 @@ class MyHomePage extends StatelessWidget {
                     ),
                     child: const Text('Sign in for Admin',
                         style: TextStyle(color: Colors.black)),
-                  ),
+                  ),*/
                 ],
               ),
             ),
@@ -120,3 +108,16 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
+
+
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   await Firebase.initializeApp();
+//   runApp(MyApp());
+// }
+
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   await Firebase.initializeApp();
+//   runApp(MyApp());
+// }

@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "795830130208",
+    "firebase_url": "https://navigateme-91ee4-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "navigateme-91ee4",
     "storage_bucket": "navigateme-91ee4.appspot.com"
   },
@@ -10,6 +11,25 @@
         "mobilesdk_app_id": "1:795830130208:android:5db93b209ef3eb90388e45",
         "android_client_info": {
           "package_name": "com.example.navigate_me"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBB_nCeMafBdA_jXQ_OChpQWJ8dptYfhdM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795830130208:android:2847e9fad82f5866388e45",
+        "android_client_info": {
+          "package_name": "com.example.navigateme"
         }
       },
       "oauth_client": [],

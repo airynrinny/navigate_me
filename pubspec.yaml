@@ -42,6 +42,7 @@ dependencies:
   firebase_auth: ^4.3.0
   carousel_slider: ^4.2.1
   google_sign_in: ^6.1.6
+  cloud_firestore: ^4.14.0
 
 dev_dependencies:
   flutter_test:
@@ -77,171 +78,56 @@ flutter:
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
 
-assets:
-- assets/images/block_d.jpg
-- assets/images/cafe.png
-- assets/images/Homepage.png
-- assets/images/iium_logo.png
-- assets/images/Log_in.png
-- assets/images/naviguideBG.png
-- assets/images/pickDestBG.png
-- assets/images/social_media.png
-- assets/images/starting PointBg.png
-- assets/images/uia logo.jpg
-- assets/images/UIAM.jpg
-
-- assets/images/blockd-cafe/1.png
-- assets/images/blockd-cafe/2.png
-- assets/images/blockd-cafe/4.png
-- assets/images/blockd-cafe/5.png
-- assets/images/blockd-cafe/7.png
-- assets/images/blockd-cafe/8.png
-- assets/images/blockd-cafe/9.png
-- assets/images/blockd-cafe/10.png
-- assets/images/blockd-cafe/11.png
-- assets/images/blockd-cafe/12.png
-- assets/images/blockd-cafe/13.png
-- assets/images/blockd-cafe/14.png
-- assets/blockd-cafe/15.png
-
-- assets/images/blockd-cyber/1.png
-- assets/images/blockd-cyber/2.png
-- assets/images/blockd-cyber/3.png
-- assets/images/blockd-cyber/4.png
-- assets/images/blockd-cyber/5.png
-- assets/images/blockd-cyber/6.png
-- assets/images/blockd-cyber/7.png
-- assets/images/blockd-cyber/8.png
-
-- assets/images/blockd-dis/1.png
-- assets/images/blockd-dis/2.png
-- assets/images/blockd-dis/3.png
-- assets/images/blockd-dis/4.png
-- assets/images/blockd-dis/5.png
-- assets/images/blockd-dis/6.png
-- assets/images/blockd-dis/7.png
-- assets/images/blockd-dis/8.png
-- assets/images/blockd-dis/9.png
-- assets/images/blockd-dis/10.png
-- assets/images/blockd-dis/11.png
-- assets/images/blockd-dis/12.png
-
-- assets/images/blockd-games/1.png
-- assets/images/blockd-games/2.png
-- assets/images/blockd-games/3.png
-
-- assets/images/blockd-go/1.png
-- assets/images/blockd-go/2.png
-- assets/images/blockd-go/3.png
-- assets/images/blockd-go/4.png
-- assets/images/blockd-go/5.png
-- assets/images/blockd-go/6.png
-- assets/images/blockd-go/7.png
-- assets/images/blockd-go/8.png
-- assets/images/blockd-go/9.png
-- assets/images/blockd-go/10.png
-- assets/images/blockd-go/11.png
-
-- assets/images/blockd-IIiBFlib/1.png
-- assets/images/blockd-IIiBFlib/2.png
-- assets/images/blockd-IIiBFlib/3.png
-- assets/images/blockd-IIiBFlib/4.png
-- assets/images/blockd-IIiBFlib/5.png
-
-- assets/images/Cafelv1/1SLF.png
-- assets/images/Cafelv1/2SLF.png
-- assets/images/Cafelv1/3SLF.png
-- assets/images/Cafelv1/4SLF.png
-- assets/images/Cafelv1/5SLF.png
-- assets/images/Cafelv1/6SLF.png
-- assets/images/Cafelv1/7SLF.png
-- assets/images/Cafelv1/8SLF.png
-- assets/images/Cafelv1/9SLF.png
-- assets/images/Cafelv1/10SLF.png
-- assets/images/Cafelv1/11SLF.png
-- assets/images/Cafelv1/12SLF.png
-- assets/images/Cafelv1/13SLF.png
-- assets/images/Cafelv1/CITA.png
-- assets/images/Cafelv1/GamesMy.png
-- assets/images/Cafelv1/HamzahFansuri.png
-- assets/images/Cafelv1/MaleMusolla.png
-- assets/images/Cafelv1/MultimediaStudio1.png
-- assets/images/Cafelv1/MultimediaStudio2.png
-- assets/images/Cafelv1/MusollaFemale.png
-- assets/images/Cafelv1/OR.png
-
-- assets/images/Cafelv2/1MPH.png
-- assets/images/Cafelv2/2MPH.png
-- assets/images/Cafelv2/3MPH.png
-- assets/images/Cafelv2/4MPH.png
-- assets/images/Cafelv2/5MPH.png
-- assets/images/Cafelv2/IAT.png
-- assets/images/Cafelv2/IIBF.png
-- assets/images/Cafelv2/IIBFLib.png
-- assets/images/Cafelv2/PGOffice.png
-
-- assets/images/Cafelv3/1.png
-- assets/images/Cafelv3/2.png
-- assets/images/Cafelv3/3.png
-- assets/images/Cafelv3/4.png
-- assets/images/Cafelv3/5.png
-- assets/images/Cafelv3/6.png
-- assets/images/Cafelv3/7.png
-- assets/images/Cafelv3/8.png
-- assets/images/Cafelv3/9.png
-- assets/images/Cafelv3/10.png
-- assets/images/Cafelv3/CyberSecurity.png
-
-- assets/images/Cafelv4/1DCS.png
-- assets/images/Cafelv4/2DCS.png
-- assets/images/Cafelv4/3DCS.png
-- assets/images/Cafelv4/4DCS.png
-- assets/images/Cafelv4/5DCS.png
-- assets/images/Cafelv4/6DCS.png
-- assets/images/Cafelv4/7DCS.png
-- assets/images/Cafelv4/8DCS.png
-- assets/images/Cafelv4/9DCS.png
-- assets/images/Cafelv4/10DCS.png
-- assets/images/Cafelv4/11DCS.png
-- assets/images/Cafelv4/12DCS.png
-- assets/images/Cafelv4/DIS.png
-- assets/images/Cafelv4/DLIS.png
-
-- assets/images/Cafelv5/1CR.png
-- assets/images/Cafelv5/2CR.png
-- assets/images/Cafelv5/3CR.png
-- assets/images/Cafelv5/4CR.png
-- assets/images/Cafelv5/5CR.png
-- assets/images/Cafelv5/6CR.png
-- assets/images/Cafelv5/7CR.png
-- assets/images/Cafelv5/8CR.png
-- assets/images/Cafelv5/ConferenceRoom.png
-- assets/images/Cafelv5/GO.png
-
-- assets/images/DdestL4/cs.png
-- assets/images/DdestL4/is.png
-- assets/images/DdestL4/lis.png
-
-- assets/images/DdestL5/cr.png
-- assets/images/DdestL5/go.png
-
-- assets/images/destL1/cafe.png
-- assets/images/destL1/cita.png
-- assets/images/destL1/gamesmy.png
-- assets/images/destL1/hamzah.png
-- assets/images/destL1/loungeF.png
-- assets/images/destL1/loungeM.png
-- assets/images/destL1/musollaF.png
-- assets/images/destL1/musollaM.png
-- assets/images/destL1/or.png
-
-- assets/images/destL2/iat.png
-- assets/images/destL2/ibf.png
-- assets/images/destL2/ibfl.png
-- assets/images/destL2/mph.png
-- assets/images/destL2/pg.png
-
-- assets/images/destL3/cyber.png
+  assets:
+  - lib/Images/
+  #Block D
+    #Level 1
+  - lib/Images/blockd/lvl1/cafe/
+  - lib/Images/blockd/lvl1/cita/
+  - lib/Images/blockd/lvl1/gamesmy/
+  - lib/Images/blockd/lvl1/hamzah/
+  - lib/Images/blockd/lvl1/lounge/
+  - lib/Images/blockd/lvl1/musolla/
+  - lib/Images/blockd/lvl1/or/
+    #Level 2
+  - lib/Images/blockd/lvl2/iat/
+  - lib/Images/blockd/lvl2/iiibf/
+  - lib/Images/blockd/lvl2/iiibflib/
+  - lib/Images/blockd/lvl2/mph/
+  - lib/Images/blockd/lvl2/postgrad/
+    #Level 3
+  - lib/Images/blockd/lvl3/cybersec/
+    #Level 4
+  - lib/Images/blockd/lvl4/dcs/
+  - lib/Images/blockd/lvl4/dis/
+  - lib/Images/blockd/lvl4/dlis/
+    #Level 5
+  - lib/Images/blockd/lvl5/cr/
+  - lib/Images/blockd/lvl5/go/
+#Cafe
+  #Level 1
+  - lib/Images/cafe/lvl1/cita/
+  - lib/Images/cafe/lvl1/gamesmy/
+  - lib/Images/cafe/lvl1/hamzah/
+  - lib/Images/cafe/lvl1/lounge/
+  - lib/Images/cafe/lvl1/musolla/
+  - lib/Images/cafe/lvl1/or/
+    #Level 2
+  - lib/Images/cafe/lvl2/iat/
+  - lib/Images/cafe/lvl2/iiibf/
+  - lib/Images/cafe/lvl2/iiibflib/
+  - lib/Images/cafe/lvl2/mph/
+  - lib/Images/cafe/lvl2/postgrad/
+    #Level 3
+  - lib/Images/cafe/lvl3/cybersec/
+    #Level 4
+  - lib/Images/cafe/lvl4/dcs/
+  - lib/Images/cafe/lvl4/dis/
+  - lib/Images/cafe/lvl4/dlis/
+    #Level 5
+  - lib/Images/cafe/lvl5/cr/
+  - lib/Images/cafe/lvl5/go/
+#- Images/Homepage.png
 
 
 

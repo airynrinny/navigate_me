@@ -20,7 +20,7 @@
             "name": "DpickUrDest1",
             "request": "launch",
             "type": "dart",
-            "program": "lib\\DpickUrDest1.dart"
+            "program": "lib\\User\\d\\Level\\DPickUrDest1.dart"
         },
         {
             "name": "DpickUrDest2",
@@ -47,10 +47,10 @@
             "program": "lib\\DpickUrDest5.dart"
         },
         {
-            "name": "naviGuideD-Cafe",
+            "name": "DFemLounge",
             "request": "launch",
             "type": "dart",
-            "program": "lib\\naviGuideD-Cafe.dart"
+            "program": "lib\\User\\d\\Navigation\\lvl1\\DFemLounge.dart"
         },
         {
             "name": "naviGuideD_CyberSec",

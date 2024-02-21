@@ -41,64 +41,42 @@ class DIatPage extends StatelessWidget {
                             fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 40.0),
-                      ListTile(
-                        leading: Image.asset(
-                            'lib/Images/blockd/lvl2/iiibflib/1.png'),
-                        title: const Text('STEP 1: Block D'),
-                        subtitle:
-                            const Text('Take the elevator and go to Level 2'),
-                      ),
-                      ListTile(
-                        leading: Image.asset(
-                            'lib/Images/blockd/lvl2/iiibflib/2.png'), // Replace 'step2.jpg' with your actual image path
-                        title: const Text('STEP 2: At level 2'),
-                        subtitle: const Text('Turn right'),
-                      ),
-                      ListTile(
-                        leading: Image.asset(
-                            'lib/Images/blockd/lvl2/iiibflib/3.png'), // Replace 'step2.jpg' with your actual image path
-                        title: const Text('STEP 3: At the hallway'),
-                        subtitle: const Text(
-                            'Go straight until you reach the corner'),
-                      ),
-                      ListTile(
-                        leading: Image.asset(
-                            'lib/Images/blockd/lvl2/iiibflib/6.png'), // Replace 'step2.jpg' with your actual image path
-                        title: const Text('STEP 4: At the corner'),
-                        subtitle: const Text('Turn right'),
-                      ),
-                      ListTile(
-                        leading: Image.asset(
-                            'lib/Images/blockd/lvl2/iiibflib/7.png'), // Replace 'step2.jpg' with your actual image path
-                        title: const Text('STEP 5: At the hallway'),
-                        subtitle: const Text('Go straight along the path'),
-                      ),
-                      ListTile(
-                        leading: Image.asset(
-                            'lib/Images/blockd/lvl2/iiibflib/8.png'), // Replace 'step2.jpg' with your actual image path
-                        title: const Text('STEP 6: At the path'),
-                        subtitle:
-                            const Text('Go straight until the end of the path'),
-                      ),
-                      ListTile(
-                        leading: Image.asset(
-                            'lib/Images/blockd/lvl2/iiibflib/9.png'), // Replace 'step2.jpg' with your actual image path
-                        title: const Text('STEP 7: Fire extinguisher'),
-                        subtitle: const Text(
-                            'After the fire extinguisher, turn left '),
-                      ),
-                      ListTile(
-                        leading: Image.asset(
-                            'lib/Images/blockd/lvl2/iiibflib/10.png'), // Replace 'step2.jpg' with your actual image path
-                        title: const Text('STEP 8: Near the balcony'),
-                        subtitle: const Text(
-                            'Go straight and turn left (the room with the floor mat)'),
-                      ),
-                      ListTile(
-                        leading: Image.asset(
-                            'lib/Images/blockd/lvl2/iiibflib/11.png'), // Replace 'step3.jpg' with your actual image path
-                        title: const Text('You have arrived!'),
-                      ),
+                      _ListTile(
+                          'lib/Images/blockd/lvl2/iiibflib/1.png',
+                          'STEP 1: Block D',
+                          'Take the elevator and go to Level 2'),
+                      _ListTile(
+                          'lib/Images/blockd/lvl2/iiibflib/2.png', // Replace 'step2.jpg' with your actual image path
+                          'STEP 2: At level 2',
+                          'Turn right'),
+                      _ListTile(
+                          'lib/Images/blockd/lvl2/iiibflib/3.png', // Replace 'step2.jpg' with your actual image path
+                          'STEP 3: At the hallway',
+                          'Go straight until you reach the corner'),
+                      _ListTile(
+                          'lib/Images/blockd/lvl2/iiibflib/6.png', // Replace 'step2.jpg' with your actual image path
+                          'STEP 4: At the corner',
+                          'Turn right'),
+                      _ListTile(
+                          'lib/Images/blockd/lvl2/iiibflib/7.png', // Replace 'step2.jpg' with your actual image path
+                          'STEP 5: At the hallway',
+                          'Go straight along the path'),
+                      _ListTile(
+                          'lib/Images/blockd/lvl2/iiibflib/8.png', // Replace 'step2.jpg' with your actual image path
+                          'STEP 6: At the path',
+                          'Go straight until the end of the path'),
+                      _ListTile(
+                          'lib/Images/blockd/lvl2/iiibflib/9.png', // Replace 'step2.jpg' with your actual image path
+                          'STEP 7: Fire extinguisher',
+                          'After the fire extinguisher, turn left '),
+                      _ListTile(
+                          'lib/Images/blockd/lvl2/iiibflib/10.png', // Replace 'step2.jpg' with your actual image path
+                          'STEP 8: Near the balcony',
+                          'Go straight and turn left (the room with the floor mat)'),
+                      _ListTile(
+                          'lib/Images/blockd/lvl2/iiibflib/11.png', // Replace 'step3.jpg' with your actual image path
+                          'You have arrived!',
+                          ''),
                     ],
                   ),
                 ],
@@ -106,6 +84,40 @@ class DIatPage extends StatelessWidget {
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _ListTile(String imagePath, String title, String subtitle) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Image.asset(
+            imagePath,
+            width: 150, // Adjust the width as needed
+            height: 150, // Adjust the height as needed
+          ),
+          const SizedBox(width: 16.0),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: 20),
+                ),
+                Text(
+                  subtitle,
+                  style: const TextStyle(
+                      fontFamily: 'Times New Roman', fontSize: 16),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

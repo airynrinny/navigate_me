@@ -41,56 +41,38 @@ class DCyberSecPage extends StatelessWidget {
                             fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 40.0),
-                      ListTile(
-                        leading: Image.asset(
-                            'lib/Images/blockd/lvl3/cybersec/1.png'),
-                        title: const Text('STEP 1: Block D'),
-                        subtitle:
-                            const Text('Take the elevator and go to Level 3'),
-                      ),
-                      ListTile(
-                        leading: Image.asset(
-                            'lib/Images/blockd/lvl3/cybersec/2.png'), // Replace 'step2.jpg' with your actual image path
-                        title: const Text('STEP 2: At level 2'),
-                        subtitle: const Text('Turn right'),
-                      ),
-                      ListTile(
-                        leading: Image.asset(
-                            'lib/Images/blockd/lvl3/cybersec/3.png'), // Replace 'step2.jpg' with your actual image path
-                        title: const Text('STEP 3: At the hallway'),
-                        subtitle: const Text(
-                            'Go straight until you reach the corner'),
-                      ),
-                      ListTile(
-                        leading: Image.asset(
-                            'lib/Images/blockd/lvl3/cybersec/4.png'), // Replace 'step2.jpg' with your actual image path
-                        title: const Text('STEP 4: At the corner'),
-                        subtitle: const Text('Turn right'),
-                      ),
-                      ListTile(
-                        leading: Image.asset(
-                            'lib/Images/blockd/lvl3/cybersec/5.png'), // Replace 'step2.jpg' with your actual image path
-                        title: const Text('STEP 5: At the hallway'),
-                        subtitle: const Text('Go straight along the path'),
-                      ),
-                      ListTile(
-                        leading: Image.asset(
-                            'lib/Images/blockd/lvl3/cybersec/6.png'), // Replace 'step2.jpg' with your actual image path
-                        title: const Text('STEP 6: At the corner'),
-                        subtitle: const Text('Turn right'),
-                      ),
-                      ListTile(
-                        leading: Image.asset(
-                            'lib/Images/blockd/lvl3/cybersec/7.png'), // Replace 'step2.jpg' with your actual image path
-                        title: const Text('STEP 7: Fire extinguisher'),
-                        subtitle: const Text(
-                            'Turn left before the fire extinguisher'),
-                      ),
-                      ListTile(
-                        leading: Image.asset(
-                            'lib/Images/blockd/lvl3/cybersec/8.png'), // Replace 'step3.jpg' with your actual image path
-                        title: const Text('You have arrived!'),
-                      ),
+                      _ListTile(
+                          'lib/Images/blockd/lvl3/cybersec/1.png',
+                          'STEP 1: Block D',
+                          'Take the elevator and go to Level 3'),
+                      _ListTile(
+                          'lib/Images/blockd/lvl3/cybersec/2.png', // Replace 'step2.jpg' with your actual image path
+                          'STEP 2: At level 2',
+                          'Turn right'),
+                      _ListTile(
+                          'lib/Images/blockd/lvl3/cybersec/3.png', // Replace 'step2.jpg' with your actual image path
+                          'STEP 3: At the hallway',
+                          'Go straight until you reach the corner'),
+                      _ListTile(
+                          'lib/Images/blockd/lvl3/cybersec/4.png', // Replace 'step2.jpg' with your actual image path
+                          'STEP 4: At the corner',
+                          'Turn right'),
+                      _ListTile(
+                          'lib/Images/blockd/lvl3/cybersec/5.png', // Replace 'step2.jpg' with your actual image path
+                          'STEP 5: At the hallway',
+                          'Go straight along the path'),
+                      _ListTile(
+                          'lib/Images/blockd/lvl3/cybersec/6.png', // Replace 'step2.jpg' with your actual image path
+                          'STEP 6: At the corner',
+                          'Turn right'),
+                      _ListTile(
+                          'lib/Images/blockd/lvl3/cybersec/7.png', // Replace 'step2.jpg' with your actual image path
+                          'STEP 7: Fire extinguisher',
+                          'Turn left before the fire extinguisher'),
+                      _ListTile(
+                          'lib/Images/blockd/lvl3/cybersec/8.png', // Replace 'step3.jpg' with your actual image path
+                          'You have arrived!',
+                          ''),
                     ],
                   ),
                 ],
@@ -98,6 +80,40 @@ class DCyberSecPage extends StatelessWidget {
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _ListTile(String imagePath, String title, String subtitle) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Image.asset(
+            imagePath,
+            width: 150, // Adjust the width as needed
+            height: 150, // Adjust the height as needed
+          ),
+          const SizedBox(width: 16.0),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: 20),
+                ),
+                Text(
+                  subtitle,
+                  style: const TextStyle(
+                      fontFamily: 'Times New Roman', fontSize: 16),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

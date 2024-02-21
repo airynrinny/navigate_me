@@ -42,12 +42,8 @@ class DGamesMyPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 40),
                       ListTile(
-                        leading: Container(
-                          height: 200,
-                          width: 200,
-                          child: Image.asset(
-                              'lib/Images/blockd/lvl1/gamesmy/1.png'),
-                        ),
+                        leading:
+                            Image.asset('lib/Images/blockd/lvl1/gamesmy/1.png'),
                         title: const Text('STEP 1: Block D'),
                         subtitle: const Text('Go straight and turn right'),
                       ),

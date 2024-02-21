@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-//import 'package:navigate_me/Admin/adminHome.dart';
 import 'package:navigate_me/User/startingPoint.dart';
-// import 'package:firebase_core/firebase_core.dart';
+
+//import 'package:firebase_core/firebase_core.dart';
+//import 'package:navigate_me/Admin/adminHome.dart';
 
 void main() {
   runApp(MyApp());
@@ -34,7 +35,7 @@ class MyHomePage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const Text(
-                    'Navigate Me',
+                    'NavigateMe',
                     style: TextStyle(
                       fontSize: 45,
                       fontWeight: FontWeight.bold,
@@ -49,7 +50,7 @@ class MyHomePage extends StatelessWidget {
                   ),
                   const SizedBox(height: 16.0),
                   const Text(
-                    'Welcome to IIUM Gombak Campus Map!',
+                    'Welcome to KICT in Building Navigation!',
                     style: TextStyle(
                       fontSize: 22,
                       color: Colors.white,
